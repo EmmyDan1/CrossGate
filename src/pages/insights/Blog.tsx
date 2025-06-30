@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiDownload, FiArrowRight, FiCheckCircle } from "react-icons/fi";
+import { FiDownload, FiCheckCircle } from "react-icons/fi";
 
 const BlogSection = () => {
   const articles = [
