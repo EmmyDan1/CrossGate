@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { FiCheckCircle, FiPackage, FiFileText, FiTruck, FiGlobe } from "react-icons/fi";
+import {Link} from 'react-router-dom'
+import {
+  FiCheckCircle,
+  FiPackage,
+  FiFileText,
+  FiTruck,
+  FiGlobe,
+} from "react-icons/fi";
 
 const ServicesSection = () => {
   const services = [
@@ -12,13 +19,13 @@ const ServicesSection = () => {
         "Packaging and labeling compliance review",
         "Product standardization for target markets",
         "Regulatory requirement analysis",
-        "Market entry strategy development"
+        "Market entry strategy development",
       ],
       benefits: [
         "Reduce export compliance risks by 70%",
         "Increase product acceptance rates",
-        "Shorten time-to-market by 40%"
-      ]
+        "Shorten time-to-market by 40%",
+      ],
     },
     {
       icon: <FiFileText className="text-3xl text-[#876e4B]" />,
@@ -29,13 +36,13 @@ const ServicesSection = () => {
         "Export/Import license applications",
         "Customs clearance documentation",
         "Phytosanitary certificates",
-        "Product-specific compliance filings"
+        "Product-specific compliance filings",
       ],
       benefits: [
         "98% document accuracy guarantee",
         "Average 3-day processing time",
-        "Dedicated compliance officer"
-      ]
+        "Dedicated compliance officer",
+      ],
     },
     {
       icon: <FiTruck className="text-3xl text-[#876e4B]" />,
@@ -46,13 +53,13 @@ const ServicesSection = () => {
         "Cold chain management for perishables",
         "Last-mile delivery coordination",
         "Real-time shipment tracking",
-        "Customs brokerage services"
+        "Customs brokerage services",
       ],
       benefits: [
         "30% average cost reduction",
         "99% on-time delivery rate",
-        "Dedicated logistics manager"
-      ]
+        "Dedicated logistics manager",
+      ],
     },
     {
       icon: <FiGlobe className="text-3xl text-[#876e4B]" />,
@@ -63,14 +70,14 @@ const ServicesSection = () => {
         "Consumer behavior analysis",
         "Negotiation style adaptation",
         "Local partnership vetting",
-        "Regulatory change alerts"
+        "Regulatory change alerts",
       ],
       benefits: [
         "60% faster deal closures",
         "Cultural miscommunication prevention",
-        "Localized marketing strategies"
-      ]
-    }
+        "Localized marketing strategies",
+      ],
+    },
   ];
 
   const partners = [
@@ -78,13 +85,12 @@ const ServicesSection = () => {
     { name: "Wise", logo: "/logos/wise.png" },
     { name: "Estonian Chamber", logo: "/logos/estonian-chamber.png" },
     { name: "Afreximbank", logo: "/logos/afreximbank.png" },
-    { name: "Norfund", logo: "/logos/norfund.png" }
+    { name: "Norfund", logo: "/logos/norfund.png" },
   ];
 
   return (
     <section className="bg-[#f9f5f0] py-20 px-6 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -92,11 +98,12 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#4e3629] mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#4e3629] mb-3 mt-12">
             Trade Is Just The Beginning
           </h2>
           <p className="text-[#7a5c49] max-w-3xl mx-auto">
-            Our end-to-end services ensure your products move smoothly between Nordic and African markets
+            Our end-to-end services ensure your products move smoothly between
+            Nordic and African markets
           </p>
         </motion.div>
 
@@ -122,7 +129,9 @@ const ServicesSection = () => {
               </div>
 
               <div className="mb-6">
-                <h4 className="font-medium text-[#876e4B] mb-3">Service Includes:</h4>
+                <h4 className="font-medium text-[#876e4B] mb-3">
+                  Service Includes:
+                </h4>
                 <ul className="space-y-2">
                   {service.details.map((item, i) => (
                     <li key={i} className="flex items-start">
@@ -134,10 +143,15 @@ const ServicesSection = () => {
               </div>
 
               <div>
-                <h4 className="font-medium text-[#876e4B] mb-3">Key Benefits:</h4>
+                <h4 className="font-medium text-[#876e4B] mb-3">
+                  Key Benefits:
+                </h4>
                 <ul className="space-y-1">
                   {service.benefits.map((benefit, i) => (
-                    <li key={i} className="text-sm text-[#5e4336] bg-[#f4e9dc]/30 px-3 py-1.5 rounded">
+                    <li
+                      key={i}
+                      className="text-sm text-[#5e4336] bg-[#f4e9dc]/30 px-3 py-1.5 rounded"
+                    >
                       {benefit}
                     </li>
                   ))}
@@ -147,7 +161,6 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Partners */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -175,7 +188,6 @@ const ServicesSection = () => {
           </div>
         </motion.div>
 
-        {/* CTA */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -183,9 +195,11 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <button className="px-8 py-3 bg-[#876e4B] text-[#f4e9dc] rounded-lg font-medium hover:bg-[#9a7f58] transition-colors">
-            Request Custom Service Package
-          </button>
+          <Link to="/contact">
+            <button className="px-8 py-3 bg-[#876e4B] text-[#f4e9dc] rounded-lg font-medium hover:bg-[#9a7f58] transition-colors">
+              Request Custom Service Package
+            </button>
+          </Link>
         </motion.div>
       </div>
     </section>

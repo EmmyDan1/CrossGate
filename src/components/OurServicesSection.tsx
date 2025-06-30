@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { serviceImages } from "../data/image";
+import { Link } from "react-router-dom";
 
 const services = [
   // {
@@ -95,12 +96,13 @@ const OurServicesSection = () => {
           </motion.div>
         ))}
       </div>
-
-      <div className="mt-10">
-        <button className="px-5 py-2.5 text-xs md:text-sm rounded-full bg-[#807566] text-white font-medium hover:bg-[#a1785c] transition-colors border border-transparent hover:border-[#f4e9dc]">
-          View All Services
-        </button>
-      </div>
+      <Link to="/services">
+        <div className="mt-10">
+          <button className="px-5 py-2.5 text-xs md:text-sm rounded-full bg-[#807566] text-white font-medium hover:bg-[#a1785c] transition-colors border border-transparent hover:border-[#f4e9dc]">
+            View All Services
+          </button>
+        </div>
+      </Link>
     </section>
   );
 };

@@ -8,6 +8,8 @@ import SectorsAndProductPage from "./pages/SectorsAndProductPage";
 import ServicePage from "./pages/ServicePage";
 import BlogSection from "./pages/insights/Blog";
 import SuccessStories from "./pages/insights/success-story";
+import ContactPage from "./pages/ContactPage";
+import Team from "./pages/about/Team";
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
         />
         <Route path="/services" element={<ServicePage />} />
         <Route path="/insights/blog" element={<BlogSection />} />
-        <Route path="/insights/success-story" element={<SuccessStories  />} />
+        <Route path="/insights/success-story" element={<SuccessStories />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/team" element={<Team />} />
       </Routes>
       <Footer />
     </div>

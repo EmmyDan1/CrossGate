@@ -129,7 +129,7 @@ const BlogSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-[#4e3629] mb-2">
+          <h2 className="text-3xl font-bold text-[#4e3629] mt-12">
             Trade Insights & Reports
           </h2>
           <p className="text-[#7a5c49]">

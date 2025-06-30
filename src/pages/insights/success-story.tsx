@@ -48,13 +48,13 @@ const SuccessStories = () => {
   return (
     <section className="bg-[#f9f5f0] py-16 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
+      
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-12 mt-12"
         >
           <h2 className="text-3xl font-bold text-[#4e3629] mb-2">
             Real Results. Real Businesses.
@@ -64,7 +64,7 @@ const SuccessStories = () => {
           </p>
         </motion.div>
 
-        {/* Case Studies */}
+   
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {caseStudies.map((study, index) => (
             <motion.div
@@ -75,7 +75,6 @@ const SuccessStories = () => {
               viewport={{ once: true }}
               className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
-              {/* Video/Story Thumbnail */}
               <div className={`h-48 relative ${study.type === 'video' ? 'bg-[#876e4B]' : 'bg-[#f4e9dc]'} flex items-center justify-center`}>
                 {study.type === 'video' ? (
                   <>
@@ -114,7 +113,6 @@ const SuccessStories = () => {
           ))}
         </div>
 
-        {/* Testimonials Slider */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

@@ -10,8 +10,10 @@ export default {
         lightbrown: "#f9f5f0",
       },
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        lato: ["Lato", "sans-serif"],
+        playfair: ['"Playfair Display"', "serif"],
+        libre: ['"Libre Baskerville"', "serif"],
+        poppins: ["Poppins", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
     },
   },
