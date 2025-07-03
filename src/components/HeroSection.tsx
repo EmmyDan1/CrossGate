@@ -1,34 +1,13 @@
 import { motion } from "framer-motion";
 import { heroImage } from "../data/image";
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from 'react';
+
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 const HeroSection = () => {
+   const [heroRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
-  const [isVisible, setIsVisible] = useState(false);
-  const heroRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (heroRef.current) {
-      observer.observe(heroRef.current);
-    }
-
-    return () => {
-      if (heroRef.current) {
-        observer.unobserve(heroRef.current);
-      }
-    };
-  }, []);
   return (
     <div
       ref={heroRef}
