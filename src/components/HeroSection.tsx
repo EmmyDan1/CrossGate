@@ -1,13 +1,41 @@
 import { motion } from "framer-motion";
 import { heroImage } from "../data/image";
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from 'react';
 
 const HeroSection = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+
+    return () => {
+      if (heroRef.current) {
+        observer.unobserve(heroRef.current);
+      }
+    };
+  }, []);
   return (
     <div
+      ref={heroRef}
       className="relative w-full h-screen bg-cover bg-center flex items-center justify-center"
       style={{
-        backgroundImage: `url(${heroImage})`,
+        backgroundImage: isVisible ? `url(${heroImage})` : 'none',
+        backgroundColor: '#f9f5f0' 
       }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-40" />

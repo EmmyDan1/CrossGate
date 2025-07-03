@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FounderImg, VisionImg } from "../../data/image";
 import OurModelSection from "../../components/OurModel";
+import { Link } from "react-router-dom";
 
 const OurStory = () => {
   return (
@@ -70,7 +71,12 @@ const OurStory = () => {
         className="relative overflow-hidden bg-[#876e4B] text-[#f4e9dc] rounded-2xl mb-24"
       >
         <div className="absolute inset-0 z-0 opacity-20">
-          <img src={VisionImg} alt="" className="w-full h-full object-cover" />
+          <img
+            src={VisionImg}
+            alt=""
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 p-10">
@@ -107,6 +113,7 @@ const OurStory = () => {
               <img
                 src={VisionImg}
                 alt="Afro-Nordic trade connection"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#876e4B]/80 to-transparent flex items-end p-6">
@@ -119,10 +126,8 @@ const OurStory = () => {
         </div>
       </motion.div>
 
-      {/* Our Model */}
       <OurModelSection />
 
-      {/* CTA */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -134,12 +139,16 @@ const OurStory = () => {
           Ready to be part of our story?
         </h3>
         <div className="flex flex-wrap justify-center gap-6">
-          <button className="px-8 py-3 bg-[#876e4B] text-[#f4e9dc] rounded-full font-medium hover:bg-[#9a7f58] transition-colors shadow-lg">
-            Meet the Team
-          </button>
-          <button className="px-8 py-3 bg-transparent border-2 border-[#876e4B] text-[#876e4B] rounded-full font-medium hover:bg-[#876e4B]/10 transition-colors">
-            Join Our Mission
-          </button>
+          <Link to="/team">
+            <button className="px-8 py-3 bg-[#876e4B] text-[#f4e9dc] rounded-full font-medium hover:bg-[#9a7f58] transition-colors shadow-lg">
+              Meet the Team
+            </button>
+          </Link>
+          <Link to="/contact">
+            <button className="px-8 py-3 bg-transparent border-2 border-[#876e4B] text-[#876e4B] rounded-full font-medium hover:bg-[#876e4B]/10 transition-colors">
+              Join Our Mission
+            </button>
+          </Link>
         </div>
       </motion.div>
     </section>

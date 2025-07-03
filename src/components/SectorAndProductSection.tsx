@@ -115,6 +115,7 @@ const SectorsAndProducts = () => {
                       <img
                         src={product.image}
                         alt={product.name}
+                        loading="lazy"
                         className="w-full h-28 object-cover"
                       />
                     </div>

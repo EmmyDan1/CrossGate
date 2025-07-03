@@ -39,14 +39,15 @@ const OurModelSection = () => {
             viewport={{ once: true }}
             className="relative rounded-xl overflow-hidden shadow-lg group h-72"
           >
-            {/* Image */}
+         
             <img
               src={item.image}
               alt={item.title}
+              loading="lazy"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
 
-            {/* Overlay */}
+            
             <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6 text-white">
               <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
               <p className="text-sm opacity-90">{item.description}</p>

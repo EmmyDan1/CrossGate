@@ -1,15 +1,20 @@
+import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Homepage from "./pages/Homepage";
 import Footer from "./components/Footer";
-import OurStory from "./pages/about/OurStory";
-import HowItWorks from "./pages/about/HowItWorks";
-import SectorsAndProductPage from "./pages/SectorsAndProductPage";
-import ServicePage from "./pages/ServicePage";
-import BlogSection from "./pages/insights/Blog";
-import SuccessStories from "./pages/insights/success-story";
-import ContactPage from "./pages/ContactPage";
-import Team from "./pages/about/Team";
+
+
+const Homepage = lazy(() => import("./pages/Homepage"));
+const OurStory = lazy(() => import("./pages/about/OurStory"));
+const HowItWorks = lazy(() => import("./pages/about/HowItWorks"));
+const SectorsAndProductPage = lazy(
+  () => import("./pages/SectorsAndProductPage")
+);
+const ServicePage = lazy(() => import("./pages/ServicePage"));
+const BlogSection = lazy(() => import("./pages/insights/Blog"));
+const SuccessStories = lazy(() => import("./pages/insights/success-story"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const Team = lazy(() => import("./pages/about/Team"));
 
 function App() {
   return (
@@ -17,7 +22,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/homepage" element={<Homepage />} />
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route
@@ -30,6 +34,8 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/team" element={<Team />} />
       </Routes>
+      {/* <Suspense fallback={<LoadingSpinner />}>
+      </Suspense> */}
       <Footer />
     </div>
   );

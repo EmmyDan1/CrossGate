@@ -77,6 +77,7 @@ const OurServicesSection = () => {
               <img
                 src={service.image}
                 alt={service.title}
+                loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
@@ -88,11 +89,13 @@ const OurServicesSection = () => {
                 {service.description}
               </p>
             </div>
-            <div className="px-5 pb-4">
-              <button className="text-xs font-medium text-white hover:text-[#f4e9dc] transition-colors">
-                Learn more →
-              </button>
-            </div>
+            <Link to="/services">
+              <div className="px-5 pb-4">
+                <button className="text-xs font-medium text-white hover:text-[#f4e9dc] transition-colors">
+                  Learn more →
+                </button>
+              </div>
+            </Link>
           </motion.div>
         ))}
       </div>
