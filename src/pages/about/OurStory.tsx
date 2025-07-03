@@ -2,16 +2,19 @@ import { motion } from "framer-motion";
 import { FounderImg, VisionImg } from "../../data/image";
 import OurModelSection from "../../components/OurModel";
 import { Link } from "react-router-dom";
+import visionValues from "../../data/dataOurStory";
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 },
+  viewport: { once: true },
+};
 
 const OurStory = () => {
   return (
-    <section className="bg-[#f4e9dc] py-20 px-6 lg:px-32">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center mb-20"
-      >
+    <motion.section className="bg-[#f4e9dc] py-20 px-6 lg:px-32">
+      <motion.header {...fadeInUp} className="text-center mb-20 mt-12">
         <h2 className="text-4xl md:text-5xl font-bold text-[#4e3629] mb-6">
           Born in Estonia. Rooted in Africa.{" "}
           <span className="text-[#876e4B]">Built for global trade.</span>
@@ -20,7 +23,7 @@ const OurStory = () => {
           "We connect Nordic exporters with Africa's growing markets — and
           African producers with high-value European buyers."
         </p>
-      </motion.div>
+      </motion.header>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 items-center">
         <motion.div
@@ -34,11 +37,12 @@ const OurStory = () => {
           <img
             src={FounderImg}
             alt="Founder"
+            loading="lazy"
             className="relative z-10 rounded-lg w-full h-96 object-cover"
           />
         </motion.div>
 
-        <motion.div
+        <motion.article
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -60,10 +64,10 @@ const OurStory = () => {
               right connections."
             </p>
           </div>
-        </motion.div>
+        </motion.article>
       </div>
 
-      <motion.div
+      <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -73,7 +77,7 @@ const OurStory = () => {
         <div className="absolute inset-0 z-0 opacity-20">
           <img
             src={VisionImg}
-            alt=""
+            alt="Vision Background"
             loading="lazy"
             className="w-full h-full object-cover"
           />
@@ -89,20 +93,13 @@ const OurStory = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {["Trust", "Innovation", "Partnership"].map((item, index) => (
+              {visionValues.map(({ title, desc }) => (
                 <div
-                  key={index}
+                  key={title}
                   className="bg-[#f4e9dc]/10 p-4 rounded-lg backdrop-blur-sm border border-[#f4e9dc]/20"
                 >
-                  <h4 className="font-bold text-lg mb-1">{item}</h4>
-                  <p className="text-xs md:text-sm">
-                    {item === "Trust" &&
-                      "Building long-term relationships through transparency"}
-                    {item === "Innovation" &&
-                      "Leveraging technology to simplify cross-border trade"}
-                    {item === "Partnership" &&
-                      "Growing together with our clients and partners"}
-                  </p>
+                  <h4 className="font-bold text-lg mb-1">{title}</h4>
+                  <p className="text-xs md:text-sm">{desc}</p>
                 </div>
               ))}
             </div>
@@ -124,7 +121,7 @@ const OurStory = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </motion.section>
 
       <OurModelSection />
 
@@ -151,7 +148,7 @@ const OurStory = () => {
           </Link>
         </div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 

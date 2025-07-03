@@ -42,7 +42,6 @@ const MobileSidebar = ({ open, setOpen }: SidebarProps) => {
         </div>
 
         <nav className="flex flex-col p-4">
- 
           <div className="mb-1">
             <button
               onClick={toggleAbout}
@@ -95,7 +94,6 @@ const MobileSidebar = ({ open, setOpen }: SidebarProps) => {
             </Link>
           ))}
 
-
           <div className="mb-1">
             <button
               onClick={toggleInsights}
@@ -144,9 +142,11 @@ const MobileSidebar = ({ open, setOpen }: SidebarProps) => {
         </nav>
 
         <div className="absolute bottom-0 w-full px-6 py-4 border-t border-[#876e4B]/20">
-          <button className="w-full bg-[#876e4B] text-[#f4e9dc] py-2 px-4 rounded-lg font-medium hover:bg-[#9a7f58] transition-colors">
-            Partner With Us
-          </button>
+          <Link to="/contact">
+            <button className="w-full bg-[#876e4B] text-[#f4e9dc] py-2 px-4 rounded-lg font-medium hover:bg-[#9a7f58] transition-colors">
+              Partner With Us
+            </button>
+          </Link>
         </div>
       </div>
     </>

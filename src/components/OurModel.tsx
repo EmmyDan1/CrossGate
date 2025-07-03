@@ -1,26 +1,7 @@
 import { motion } from "framer-motion";
-import { modelImages } from "../data/image";
+import { modelItems } from "../data/dataOurStory";
 
-const modelItems = [
-  {
-    title: "Export-Import Matchmaking",
-    description:
-      "Precision pairing of Nordic quality with African market opportunities",
-    image: modelImages.matchmaking,
-  },
-  {
-    title: "Compliance & Logistics",
-    description:
-      "End-to-end support navigating customs and transportation",
-    image: modelImages.logistics,
-  },
-  {
-    title: "Cross-Cultural Advisory",
-    description:
-      "Bridging business cultures for smoother negotiations",
-    image: modelImages.advisory,
-  },
-];
+
 
 const OurModelSection = () => {
   return (
