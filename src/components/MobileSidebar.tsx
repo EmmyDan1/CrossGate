@@ -78,7 +78,7 @@ const MobileSidebar = ({ open, setOpen }: SidebarProps) => {
           </div>
 
           {[
-            { path: "/sectors", label: "Sectors" },
+            { path: "/sectors-and-product", label: "Sectors" },
             { path: "/services", label: "Services" },
           ].map((item) => (
             <Link

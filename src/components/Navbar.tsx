@@ -40,12 +40,14 @@ const Navbar = () => {
               src={CGlogo2}
               alt="CrossGate Logo"
               className="w-12 h-12 md:w-16 md:h-16 object-contain"
+              loading="lazy"
             />
           ) : (
             <img
               src={CGlogoBrown}
               alt="CrossGate Logo"
               className="w-12 h-12 md:w-16 md:h-16 object-contain"
+              loading="lazy"
             />
           )}
           <span className="text-xl md:text-2xl font-bold">CrossGate</span>
