@@ -62,6 +62,7 @@ const HeroSection = () => {
             src={landingImg.img}
             alt="CrossGate partnership"
             className="rounded-2xl shadow-lg w-full object-cover"
+            loading="lazy"
           />
         </motion.div>
       </div>
