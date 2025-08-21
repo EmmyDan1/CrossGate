@@ -25,7 +25,13 @@ import AfricanFabrics from "../assets/images/AfricanFabrics.jpg";
 import AgroFood from "../assets/images/AgroFood.jpg";
 import BambooProduct from "../assets/images/BambooProduct.jpg";
 import AfricanOil from "../assets/images/AfricanOil.jpg";
+import LandingImg from '../assets/images/landingimg.png'
 
+ type imageProp = {
+    img: string
+}
+
+export const landingImg: imageProp = { img: LandingImg };
 export const EstoniaToAfrica = {
   TechHardWare,
   Funiture,
@@ -33,6 +39,8 @@ export const EstoniaToAfrica = {
   DiaryProduct,
   Construction,
 };
+
+
 
 export const AfricaToEstonia = {
   AfricanSpice,

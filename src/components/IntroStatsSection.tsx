@@ -37,7 +37,7 @@ const IntroStatsSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="text-[22px] md:text-3xl font-medium leading-relaxed max-w-4xl mx-auto text-[#4e3629] mb-12 md:mb-16"
+        className="text-[22px] mt-52 md:text-3xl mt-0 font-medium leading-relaxed max-w-4xl mx-auto text-[#4e3629] mb-12 md:mb-16"
       >
         <span className="relative inline-block">
           “We connect Nordic exporters with Africa’s growing markets — and
