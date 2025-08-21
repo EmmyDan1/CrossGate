@@ -7,19 +7,19 @@ const stats = [
     label: "Continents Connected",
     value: 2,
     duration: 4,
-    delay: 0.3    
+    delay: 0.3
   },
   {
     label: "Products Sourced",
-    value: 500,
+    value: 1000,
     duration: 5,
-    delay: 0.6    
+    delay: 0.6
   },
   {
-    label: "SMEs & Trade Councils",
-    value: 30,
+    label: "Trusted by 50+ SMEs, governments & trade groups",
+    value: 50,
     duration: 4,
-    delay: 0.9    
+    delay: 0.9
   },
 ];
 
@@ -31,17 +31,16 @@ const IntroStatsSection = () => {
         clipPath: "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
       }}
     >
-    
+
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="text-[22px] mt-52 md:text-3xl mt-0 font-medium leading-relaxed max-w-4xl mx-auto text-[#4e3629] mb-12 md:mb-16"
+        className="text-[22px] mt-52 md:text-3xl md:mt-0 font-medium leading-relaxed max-w-4xl mx-auto text-[#4e3629] mb-12 md:mb-16"
       >
         <span className="relative inline-block">
-          “We connect Nordic exporters with Africa’s growing markets — and
-          African producers with high-value European buyers.”
+          “We connect African producers with high-value European markets — and European innovators with Africa’s vibrant economies.”
           <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-[#d4a373] opacity-60 rounded" />
         </span>
       </motion.h2>
@@ -54,12 +53,12 @@ const IntroStatsSection = () => {
         className="grid grid-cols-1 gap-16 sm:grid-cols-3 sm:gap-8 lg:gap-12 mt-10 max-w-5xl mx-auto"
       >
         {stats.map((stat, index) => (
-          <motion.div 
-            key={index} 
+          <motion.div
+            key={index}
             className="flex flex-col items-center"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ 
+            transition={{
               delay: stat.delay,
               duration: 0.7,
               type: "spring",
@@ -68,8 +67,8 @@ const IntroStatsSection = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-5xl md:text-6xl font-bold text-[#4e3629] drop-shadow">
-              <CountUp 
-                end={stat.value} 
+              <CountUp
+                end={stat.value}
                 duration={stat.duration}
                 delay={stat.delay}
                 enableScrollSpy
@@ -83,7 +82,7 @@ const IntroStatsSection = () => {
         ))}
       </motion.div>
 
-  
+
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -91,16 +90,16 @@ const IntroStatsSection = () => {
         viewport={{ once: true }}
         className="flex flex-col items-center sm:flex-row justify-center gap-4 sm:gap-6 mt-16 px-4"
       >
-        <Link 
-          to="/contact?type=partner" 
+        <Link
+          to="/contact?type=partner"
           className="w-full sm:w-auto max-w-xs"
         >
           <button className="w-full bg-[#8a6b56] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#a1785c] transition duration-300 shadow-md">
             Partner With Us
           </button>
         </Link>
-        <Link 
-          to="/contact?type=matchmaking" 
+        <Link
+          to="/contact?type=matchmaking"
           className="w-full sm:w-auto max-w-xs"
         >
           <button className="w-full border border-[#8a6b56] text-[#8a6b56] px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#f6eee7] transition duration-300">
@@ -119,11 +118,7 @@ const IntroStatsSection = () => {
       >
         <h3 className="text-xl font-semibold mb-4">About CrossGate Connect</h3>
         <p className="text-[#5e4336] opacity-90">
-          CrossGate Connect is a modern pan-African trade platform facilitating
-          economic bridges between Nordic exporters and African producers.
-          Through strategic matchmaking, curated events, and partnership
-          support, we channel sustainable capital and global opportunity into
-          key African markets.
+          CrossGate Connect is a modern pan-African trade platform facilitating economic bridges between European markets and African producers. Through strategic matchmaking, curated events, and partnership support, we channel sustainable capital and global opportunity into key African markets.
         </p>
       </motion.div>
     </section>
