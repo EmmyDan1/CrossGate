@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import Dhl from '../../public/logos/DHL.png';
+import TradeMap from '../../public/logos/TradeMap.png';
+import Afremix from '../../public/logos/Afreximbank.png'
 import {
-  FiCheckCircle,
   FiPackage,
   FiFileText,
   FiTruck,
@@ -14,78 +16,30 @@ const ServicesSection = () => {
       icon: <FiPackage className="text-3xl text-[#876e4B]" />,
       title: "Export Readiness Support",
       description: "Comprehensive preparation for international trade success",
-      details: [
-        "Customized export training programs",
-        "Packaging and labeling compliance review",
-        "Product standardization for target markets",
-        "Regulatory requirement analysis",
-        "Market entry strategy development",
-      ],
-      benefits: [
-        "Reduce export compliance risks by 70%",
-        "Increase product acceptance rates",
-        "Shorten time-to-market by 40%",
-      ],
     },
     {
       icon: <FiFileText className="text-3xl text-[#876e4B]" />,
       title: "Documentation & Licensing",
       description: "End-to-end handling of complex trade paperwork",
-      details: [
-        "Certificate of Origin processing",
-        "Export/Import license applications",
-        "Customs clearance documentation",
-        "Phytosanitary certificates",
-        "Product-specific compliance filings",
-      ],
-      benefits: [
-        "98% document accuracy guarantee",
-        "Average 3-day processing time",
-        "Dedicated compliance officer",
-      ],
     },
     {
       icon: <FiTruck className="text-3xl text-[#876e4B]" />,
       title: "Logistics Coordination",
       description: "Seamless transportation from factory to final destination",
-      details: [
-        "Multimodal transport solutions",
-        "Cold chain management for perishables",
-        "Last-mile delivery coordination",
-        "Real-time shipment tracking",
-        "Customs brokerage services",
-      ],
-      benefits: [
-        "30% average cost reduction",
-        "99% on-time delivery rate",
-        "Dedicated logistics manager",
-      ],
     },
     {
       icon: <FiGlobe className="text-3xl text-[#876e4B]" />,
       title: "Cultural & Market Advisory",
       description: "Navigate business landscapes with local insight",
-      details: [
-        "Market-specific business etiquette training",
-        "Consumer behavior analysis",
-        "Negotiation style adaptation",
-        "Local partnership vetting",
-        "Regulatory change alerts",
-      ],
-      benefits: [
-        "60% faster deal closures",
-        "Cultural miscommunication prevention",
-        "Localized marketing strategies",
-      ],
+
     },
   ];
 
   const partners = [
-    { name: "DHL", logo: "/logos/dhl.png" },
-    { name: "Wise", logo: "/logos/wise.png" },
-    { name: "Estonian Chamber", logo: "/logos/estonian-chamber.png" },
-    { name: "Afreximbank", logo: "/logos/afreximbank.png" },
-    { name: "Norfund", logo: "/logos/norfund.png" },
+    { name: "DHL", logo: Dhl },
+    { name: "Wise", logo: TradeMap },
+    { name: "Afreximbank", logo: Afremix },
+
   ];
 
   return (
@@ -126,36 +80,6 @@ const ServicesSection = () => {
                   </h3>
                   <p className="text-[#5e4336]">{service.description}</p>
                 </div>
-              </div>
-
-              <div className="mb-6">
-                <h4 className="font-medium text-[#876e4B] mb-3">
-                  Service Includes:
-                </h4>
-                <ul className="space-y-2">
-                  {service.details.map((item, i) => (
-                    <li key={i} className="flex items-start">
-                      <FiCheckCircle className="text-[#876e4B] mt-0.5 mr-2 flex-shrink-0" />
-                      <span className="text-[#5e4336] text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="font-medium text-[#876e4B] mb-3">
-                  Key Benefits:
-                </h4>
-                <ul className="space-y-1">
-                  {service.benefits.map((benefit, i) => (
-                    <li
-                      key={i}
-                      className="text-sm text-[#5e4336] bg-[#f4e9dc]/30 px-3 py-1.5 rounded"
-                    >
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
               </div>
             </motion.div>
           ))}

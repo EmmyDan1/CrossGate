@@ -2,8 +2,8 @@ import HeroImage from "../assets/images/hero.jpg";
 import Logistics from "../assets/Services/logistics.jpg";
 import Envelope from "../assets/Services/envelopes.jpg";
 import PeopleTalking from "../assets/Services/peopetalking.jpg";
-// import Export from "../assets/Services/packing.jpg";
-import FounderImg from "../assets/images/man3.jpg";
+import Export from "../assets/Services/packing.jpg";
+import FounderImg from "../assets/images/founderImg.png";
 import VisionImg from "../assets/images/phto1.jpg";
 import matchmaking from "../assets/images/phto2.jpg";
 import logistics from "../assets/images/phto3.jpg";
@@ -15,17 +15,17 @@ import step5 from "../assets/images/step5.jpg";
 import step2 from "../assets/images/step2.jpg";
 import step3 from "../assets/images/step3.jpg";
 import step4 from "../assets/images/step4.jpg";
-import TechHardWare from "../assets/images/Tech Hardware.jpg";
-import Funiture from "../assets/images/Funiture.jpg";
-import ProcessedFood from "../assets/images/ProcessedFood.jpg";
-import DiaryProduct from "../assets/images/DiaryProduct.jpg";
-import Construction from "../assets/images/constructionMats.jpg";
-import AfricanSpice from "../assets/images/AfricanSpice.jpg";
-import AfricanFabrics from "../assets/images/AfricanFabrics.jpg";
-import AgroFood from "../assets/images/AgroFood.jpg";
+import TechHardWare from "../assets/images/ProcessedFood2.png";
+import IndustryMachine from "../assets/images/IndustryMachine.png";
+import ProcessedFood from "../assets/images/pharmecticals.png";
+import DiaryProduct from "../assets/images/DiaryProducts.png";
+import AfricanSpice from "../assets/images/AfricanSpices.png";
+import TradePfood from '../assets/images/TradePfood.png'
 import BambooProduct from "../assets/images/BambooProduct.jpg";
-import AfricanOil from "../assets/images/AfricanOil.jpg";
+import AfricanOil from "../assets/images/AfricanOil2.png";
 import LandingImg from '../assets/images/landingimg.png'
+import Funiture from "../assets/images/Funiture.jpg" 
+import Textiles from '../assets/images/Textiles.png'
 
  type imageProp = {
     img: string
@@ -34,20 +34,21 @@ import LandingImg from '../assets/images/landingimg.png'
 export const landingImg: imageProp = { img: LandingImg };
 export const EstoniaToAfrica = {
   TechHardWare,
-  Funiture,
+  IndustryMachine,
   ProcessedFood,
   DiaryProduct,
-  Construction,
+  Funiture,
 };
 
 
 
 export const AfricaToEstonia = {
   AfricanSpice,
-  AfricanFabrics,
-  AgroFood,
-  BambooProduct,
   AfricanOil,
+  Textiles,
+  BambooProduct,
+  TradePfood,
+  
 };
 
 export const heroImage = HeroImage;
@@ -63,7 +64,7 @@ export const serviceImages = {
   Logistics,
   Envelope,
   PeopleTalking,
-  // Export,
+  Export
 };
 export { FounderImg, VisionImg, CGlogo, CGlogo2, CGlogoBrown };
 export const modelImages = {

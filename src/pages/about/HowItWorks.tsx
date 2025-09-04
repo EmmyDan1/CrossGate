@@ -1,135 +1,61 @@
 import { memo } from "react";
-import { LazyMotion, domAnimation, m } from "framer-motion";
-import { steps } from "../../data/howItWorksData";
-
-// Move static objects outside component
-const transition = { duration: 0.6 };
-const viewport = { once: true };
 
 const HowItWorksSection = () => {
-  return (
-    <section className="bg-[#fdfaf5] py-16 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto mt-12">
-        <LazyMotion features={domAnimation}>
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={transition}
-            viewport={viewport}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-semibold text-[#4e3629] mb-2 leading-tight">
-              Our Trade Enablement Process
-            </h2>
-            <p className="text-[#7a5c49]">
-              "Streamlined cross-continental trade methodology"
-            </p>
-          </m.div>
+  const steps = [
+    {
+      title: "Discover Opportunities",
+      description: "We research markets and identify viable products.",
+      icon: "🔍"
+    },
+    {
+      title: "Match & Verify",
+      description: "We connect vetted suppliers and buyers across both continents.",
+      icon: "🤝"
+    },
+    {
+      title: "Support End-to-End",
+      description: "From documents to shipping, we've got it covered.",
+      icon: "🛣️"
+    },
+    {
+      title: "Scale Across Regions",
+      description: "Expand your market access with confidence.",
+      icon: "📈"
+    }
+  ];
 
-          <div className="space-y-10">
-            {steps.map((step, index) => (
-              <m.div
-                key={step.title || index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ ...transition, delay: index * 0.1 }}
-                viewport={viewport}
-                className="flex flex-col md:flex-row gap-6 items-start"
-              >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#876e4B] text-[#f4e9dc] flex items-center justify-center font-medium shadow-sm">
+  return (
+    <section className="py-32 px-6 md:px-12 bg-[#fdfaf5]">
+      <div className="max-w-4xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#4e3629] mb-4">
+            Trade Without Borders
+          </h2>
+          <p className="text-[#7a5c49] text-lg">
+            4-Step Journey to Cross-Continental Trade Success
+          </p>
+        </div>
+
+        {/* 4-Step Process */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {steps.map((step, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-[#e8d6c0]">
+              <div className="flex items-start mb-4">
+                <div className="w-12 h-12 rounded-full bg-[#f8f4eb] text-[#876e4B] flex items-center justify-center text-xl mr-4 flex-shrink-0">
                   {step.icon}
                 </div>
-
-                <div className="flex-1 bg-white p-6 rounded-lg shadow-sm border border-[#f4e9dc]">
-                  <div className="flex flex-col md:flex-row md:items-center gap-6">
-                    <div className="md:flex-1">
-                      <h3 className="text-xl font-semibold text-[#4e3629] mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-[#5e4336] text-sm mb-3">
-                        {step.description}
-                      </p>
-                      <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs">
-                        {step.detailed.map((point, i) => (
-                          <li key={i} className="flex items-start">
-                            <span className="text-[#876e4B] mr-1">•</span>
-                            {point}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="md:w-1/3">
-                      <img
-                        src={step.image}
-                        alt={step.title}
-                        loading="lazy"
-                        className="w-full h-40 object-cover rounded"
-                      />
-                    </div>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-[#4e3629] mb-2">{step.title}</h3>
+                  <p className="text-[#5e4336]">{step.description}</p>
                 </div>
-              </m.div>
-            ))}
-          </div>
-        </LazyMotion>
-
-        <div className="mt-12">
-          <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#f4e9dc]">
-            <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/2 p-6">
-                <h3 className="text-lg font-semibold text-[#4e3629] mb-2">
-                  CrossGate Walkthrough
-                </h3>
-                <p className="text-[#5e4336] text-sm mb-4">
-                  See how CrossGate bridges Nordic and African markets through
-                  modern web technology.
-                </p>
-                <a
-                  href="https://youtu.be/YOUR_VIDEO_ID"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 text-sm bg-[#876e4B] text-[#f4e9dc] rounded font-medium hover:bg-[#9a7f58] transition-colors"
-                >
-                  <svg
-                    className="w-4 h-4 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  Watch Demo (12 min)
-                </a>
-              </div>
-              <div className="md:w-1/2 aspect-w-16 aspect-h-9">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                  title="CrossGate Platform Demo"
-                  loading="lazy"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-// Prevent re-renders unless props change (perf boost)
 export default memo(HowItWorksSection);

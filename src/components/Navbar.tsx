@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiChevronDown } from "react-icons/fi";
 import MobileSidebar from "../components/MobileSidebar";
@@ -12,6 +12,8 @@ const Navbar = () => {
   const [aboutDropdown, setAboutDropdown] = useState(false);
   const [insightsDropdown, setInsightsDropdown] = useState(false);
 
+  const aboutTimeoutRef = useRef<number | null>(null);
+  const insightsTimeoutRef = useRef<number | null>(null);
   const location = useLocation();
   const isHome = location.pathname === "/";
 
@@ -25,10 +27,36 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  const handleAboutMouseEnter = () => {
+    if (aboutTimeoutRef.current) {
+      clearTimeout(aboutTimeoutRef.current);
+    }
+    setAboutDropdown(true);
+  };
+
+  const handleAboutMouseLeave = () => {
+    aboutTimeoutRef.current = setTimeout(() => {
+      setAboutDropdown(false);
+    }, 300); 
+  };
+
+  const handleInsightsMouseEnter = () => {
+    if (insightsTimeoutRef.current) {
+      clearTimeout(insightsTimeoutRef.current);
+    }
+    setInsightsDropdown(true);
+  };
+
+  const handleInsightsMouseLeave = () => {
+    insightsTimeoutRef.current = setTimeout(() => {
+      setInsightsDropdown(false);
+    }, 300); 
+  };
+
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-30 transition-all duration-500 px-6 md:px-8 py-3  flex justify-between items-center ${
+        className={`fixed top-0 left-0 w-full z-30 transition-all duration-500 px-6 md:px-8 py-3 flex justify-between items-center ${
           isHome
             ? "bg-transparent text-white"
             : "bg-secondary text-primary shadow"
@@ -54,29 +82,36 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex gap-8 text-[16px] font-medium relative">
+          {/* About Dropdown */}
           <div
             className="relative group"
-            onMouseEnter={() => setAboutDropdown(true)}
-            onMouseLeave={() => setAboutDropdown(false)}
+            onMouseEnter={handleAboutMouseEnter}
+            onMouseLeave={handleAboutMouseLeave}
           >
             <button className="flex items-center gap-1">
               About <FiChevronDown size={16} className="mt-1" />
             </button>
             {aboutDropdown && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-black/70 text-white rounded-md shadow-lg py-2 z-50">
+              <div className="absolute top-full text-md left-0 mt-2 w-48 h-36 bg-black/70 text-white rounded-md shadow-lg py-2 z-50">
                 <Link
                   to="/our-story"
-                  className="block px-4 py-2 hover:bg-black/50"
+                  className="block px-4 py-1 hover:bg-black/50"
                 >
                   Our Story
                 </Link>
                 <Link
+                  to="/our-model"
+                  className="block px-4 py-1 hover:bg-black/50"
+                >
+                  Our Model
+                </Link>
+                <Link
                   to="/how-it-works"
-                  className="block px-4 py-2 hover:bg-black/50"
+                  className="block px-4 py-1 hover:bg-black/50"
                 >
                   How It Works
                 </Link>
-                <Link to="/team" className="block px-4 py-2 hover:bg-black/50">
+                <Link to="/team" className="block px-4 py-1 hover:bg-black/50">
                   Team
                 </Link>
               </div>
@@ -90,10 +125,11 @@ const Navbar = () => {
             Services
           </Link>
 
+          {/* Insights Dropdown */}
           <div
             className="relative group"
-            onMouseEnter={() => setInsightsDropdown(true)}
-            onMouseLeave={() => setInsightsDropdown(false)}
+            onMouseEnter={handleInsightsMouseEnter}
+            onMouseLeave={handleInsightsMouseLeave}
           >
             <button className="flex items-center gap-1">
               Insights <FiChevronDown size={16} className="mt-1" />

@@ -26,7 +26,7 @@ const stats = [
 const IntroStatsSection = () => {
   return (
     <section
-      className="relative bg-lightbrown py-14 px-6 md:px-24 text-center overflow-hidden"
+      className="relative bg-lightbrown px-6 md:px-24 md:py-14 text-center overflow-hidden"
       style={{
         clipPath: "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
       }}
@@ -37,7 +37,7 @@ const IntroStatsSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="text-[22px] mt-52 md:text-3xl md:mt-0 font-medium leading-relaxed max-w-4xl mx-auto text-[#4e3629] mb-12 md:mb-16"
+        className="text-[22px] mt-12 md:text-3xl md:mt-0 font-medium leading-relaxed max-w-4xl mx-auto text-[#4e3629] mb-12 md:mb-16"
       >
         <span className="relative inline-block">
           “We connect African producers with high-value European markets — and European innovators with Africa’s vibrant economies.”

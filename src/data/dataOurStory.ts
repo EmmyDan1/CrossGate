@@ -2,21 +2,14 @@ import { modelImages } from "../data/image";
 
 export const modelItems = [
   {
-    title: "Export-Import Matchmaking",
-    description:
-      "Precision pairing of Nordic quality with African market opportunities",
+
     image: modelImages.matchmaking,
   },
   {
-    title: "Compliance & Logistics",
-    description:
-      "End-to-end support navigating customs and transportation",
+
     image: modelImages.logistics,
   },
   {
-    title: "Cross-Cultural Advisory",
-    description:
-      "Bridging business cultures for smoother negotiations",
     image: modelImages.advisory,
   },
 ];
@@ -25,16 +18,16 @@ export const modelItems = [
 
 const visionValues = [
   {
-    title: "Trust",
-    desc: "Building long-term relationships through transparency",
+    id: 1,
+    desc: "Shea butter from West Africa powers wellness in Helsinki ",
   },
   {
-    title: "Innovation",
-    desc: "Leveraging technology to simplify cross-border trade",
+    id: 2,
+    desc: "Solar tech from Lithuania lights up farms in East Africa",
   },
   {
-    title: "Partnership",
-    desc: "Growing together with our clients and partners",
+    id: 3,
+    desc: "African goods and European services move with equal visibility and value",
   },
 ];
 

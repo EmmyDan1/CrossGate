@@ -2,11 +2,14 @@ import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import OurModelSection from "./pages/about/OurModel";
+
 
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const OurStory = lazy(() => import("./pages/about/OurStory"));
 const HowItWorks = lazy(() => import("./pages/about/HowItWorks"));
+const OurModel = lazy(() => import("./pages/about/OurModel"))
 const SectorsAndProductPage = lazy(
   () => import("./pages/SectorsAndProductPage")
 );
@@ -24,6 +27,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/our-model" element={<OurModelSection/>}/>
         <Route
           path="/sectors-and-product"
           element={<SectorsAndProductPage />}

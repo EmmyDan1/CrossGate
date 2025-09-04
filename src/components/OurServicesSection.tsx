@@ -3,48 +3,35 @@ import { serviceImages } from "../data/image";
 import { Link } from "react-router-dom";
 
 const services = [
-  // {
-  //   icon: "📦",
-  //   title: "Export Readiness Support",
-  //   description:
-  //     "Training, packaging guidance, and regulatory compliance help to prepare you for international trade.",
-  //   image: serviceImages.Export,
-  // },
+
   {
     icon: "🧾",
     title: "Documentation & Licensing",
     description:
-      "Certificates, permits, and customs documentation — simplified and handled with expertise.",
+      "Certificates, Permits, Customs.",
     image: serviceImages.Envelope,
   },
   {
     icon: "🚚",
     title: "Logistics Coordination",
     description:
-      "From cold chain to last-mile delivery, we help ensure smooth and timely transportation.",
+      "Cold chain, last mile, intermodal.",
     image: serviceImages.Logistics,
   },
   {
     icon: "🧠",
     title: "Cultural & Market Advisory",
     description:
-      "We help you understand local norms and build trust across African and European markets.",
+      "B2B etiquette, pricing norms, etc.",
     image: serviceImages.PeopleTalking,
   },
-  // {
-  //   icon: "📦",
-  //   title: "Export Readiness Support",
-  //   description:
-  //     "Training, packaging guidance, and regulatory compliance help to prepare you for international trade.",
-  //   image: serviceImages.Export,
-  // },
-  // {
-  //   icon: "📦",
-  //   title: "Export Readiness Support",
-  //   description:
-  //     "Training, packaging guidance, and regulatory compliance help to prepare you for international trade.",
-  //   image: serviceImages.Export,
-  // },
+  {
+    icon: "📦",
+    title: "Export Readiness Support",
+    description:
+      "Training, packaging guidance, and regulatory compliance help to prepare you for international trade.",
+    image: serviceImages.Export,
+  },
 ];
 
 const OurServicesSection = () => {

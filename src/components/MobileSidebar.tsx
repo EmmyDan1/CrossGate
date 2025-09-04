@@ -58,7 +58,7 @@ const MobileSidebar = ({ open, setOpen }: SidebarProps) => {
               />
             </button>
             {aboutOpen && (
-              <div className="ml-4 mt-1 space-y-1">
+              <div className="ml-4 -mt-1 leading-tight  space-y-1">
                 <Link
                   to="/our-story"
                   onClick={() => setOpen(false)}
@@ -67,11 +67,21 @@ const MobileSidebar = ({ open, setOpen }: SidebarProps) => {
                   Our Story
                 </Link>
                 <Link
+                  to="/our-model"
+                  className="block px-4 py-2 text-[#4e3629] rounded-lg hover:bg-[#876e4B]/10 transition-colors"
+                >
+                  Our Model
+                </Link>
+
+                <Link
                   to="/how-it-works"
                   onClick={() => setOpen(false)}
                   className="block px-4 py-2 text-[#4e3629] rounded-lg hover:bg-[#876e4B]/10 transition-colors"
                 >
                   How It Works
+                </Link>
+                <Link to="/team" className="block px-4 py-2 text-[#4e3629] rounded-lg hover:bg-[#876e4B]/10 transition-colors">
+                  Team
                 </Link>
               </div>
             )}

@@ -10,29 +10,28 @@ const SectorsAndProducts = () => {
       subtitle: "Nordic quality meeting African markets",
       products: [
         {
-          name: "Dairy Products",
-          description: "Premium cheeses, milk powders, and dairy tech",
+          name: "Renewable Tech",
+
           image: EstoniaToAfrica.DiaryProduct,
         },
         {
-          name: "Tech Hardware",
-          description: "Smart farming equipment, solar solutions, IoT devices",
+          name: "Dairy & processed foods",
+
           image: EstoniaToAfrica.TechHardWare,
         },
         {
-          name: "Processed Food",
-          description: "Ready-to-eat meals, health foods, and beverages",
+          name: "Pharmaceuticals & medical devices",
+
           image: EstoniaToAfrica.ProcessedFood,
         },
         {
-          name: "Furniture",
-          description: "Sustainable Nordic design furniture and components",
-          image: EstoniaToAfrica.Funiture,
+          name: " Industry Machine",
+
+          image: EstoniaToAfrica.IndustryMachine,
         },
         {
-          name: "Construction Materials",
-          description: "Energy-efficient building materials and tech",
-          image: EstoniaToAfrica.Construction,
+          name: "Furniture, smart textiles",
+          image: EstoniaToAfrica.Funiture,
         },
       ],
     },
@@ -46,14 +45,14 @@ const SectorsAndProducts = () => {
           image: AfricaToEstonia.AfricanSpice,
         },
         {
-          name: "Textiles & Crafts",
+          name: "Natural oils & plant extracts",
           description: "Authentic African fabrics and handmade goods",
-          image: AfricaToEstonia.AfricanFabrics,
+          image: AfricaToEstonia.AfricanOil,
         },
         {
-          name: "Agro-Processed Goods",
+          name: "Textiles & heritage crafts",
           description: "Dried fruits, tomato paste, and specialty ingredients",
-          image: AfricaToEstonia.AgroFood,
+          image: AfricaToEstonia.Textiles,
         },
         {
           name: "Bamboo & Wood Products",
@@ -61,9 +60,9 @@ const SectorsAndProducts = () => {
           image: AfricaToEstonia.BambooProduct,
         },
         {
-          name: "Natural Oils & Herbs",
+          name: "Agro-processed goods",
           description: "Medicinal plants and essential oils",
-          image: AfricaToEstonia.AfricanOil,
+          image: AfricaToEstonia.TradePfood,
         },
       ],
     },
@@ -88,7 +87,7 @@ const SectorsAndProducts = () => {
           </p>
         </motion.div>
 
-        <div className="space-y-20">
+        <div className="space-y-16">
           {tradeDirections.map((direction, index) => (
             <motion.div
               key={index}
@@ -97,35 +96,35 @@ const SectorsAndProducts = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="mb-10">
-                <h3 className="text-2xl font-semibold text-[#876e4B] mb-2">
+              {/* Section Heading */}
+              <div className="mb-8 text-center md:text-left">
+                <h3 className="text-2xl font-bold text-[#876e4B] mb-1">
                   {direction.title}
                 </h3>
                 <p className="text-[#5e4336]">{direction.subtitle}</p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Compact Card Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {direction.products.map((product, idx) => (
                   <motion.div
                     key={idx}
-                    whileHover={{ y: -5 }}
-                    className="bg-secondary rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-[#f4e9dc]"
+                    whileHover={{ y: -4, scale: 1.02 }}
+                    className="bg-[#faf7f2] rounded-xl overflow-hidden shadow hover:shadow-lg transition-all duration-300 border border-[#e7dccf]"
                   >
-                    <div className="aspect-w-4 aspect-h-3 ">
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        loading="lazy"
-                        className="w-full h-28 object-cover"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h4 className="text-xl font-semibold text-[#4e3629] mb-2">
+                    {/* Unified Image */}
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      loading="lazy"
+                      className="w-full h-36 object-cover rounded-t-xl"
+                    />
+
+                    {/* Compact Text */}
+                    <div className="p-4">
+                      <h4 className="text-lg font-semibold text-[#4e3629] leading-snug">
                         {product.name}
                       </h4>
-                      <p className="text-[#5e4336] text-sm mb-4">
-                        {product.description}
-                      </p>
                     </div>
                   </motion.div>
                 ))}

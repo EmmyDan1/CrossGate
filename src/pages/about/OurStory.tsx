@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FounderImg, VisionImg } from "../../data/image";
-import OurModelSection from "../../components/OurModel";
+
 import { Link } from "react-router-dom";
 import visionValues from "../../data/dataOurStory";
 
@@ -13,16 +13,18 @@ const fadeInUp = {
 
 const OurStory = () => {
   return (
-    <motion.section className="bg-[#f4e9dc] py-20 px-6 lg:px-32">
+    <motion.section className="bg-[#f4e9dc] py-20 px-6 lg:px-24">
       <motion.header {...fadeInUp} className="text-center mb-20 mt-12">
         <h2 className="text-4xl md:text-5xl font-bold text-[#4e3629] mb-6">
-          Born in Estonia. Rooted in Africa.{" "}
-          <span className="text-[#876e4B]">Built for global trade.</span>
+          Rooted in Africa. Powered by Europe.{" "}
+          <span className="text-[#876e4B]">
+            Committed to equitable global trade.
+          </span>
         </h2>
-        <p className="text-xl text-[#7a5c49] max-w-4xl mx-auto">
+        {/* <p className="text-xl text-[#7a5c49] max-w-4xl mx-auto">
           "We connect Nordic exporters with Africa's growing markets — and
           African producers with high-value European buyers."
-        </p>
+        </p> */}
       </motion.header>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 items-center">
@@ -52,16 +54,22 @@ const OurStory = () => {
             Founder's Journey
           </h3>
           <p className="text-[#4e3629] mb-6">
-            Born to a Nigerian father and Estonian mother, our founder grew up
-            navigating both cultures. After witnessing the frustrating trade
-            disconnects between these regions firsthand, the vision for
-            CrossGate was born — to bridge markets through cultural
-            understanding and streamlined logistics.
+            CrossGate Connect was born out of a lived experience — one that
+            spans cities, cultures, and continents. Our founder, a Nigerian
+            entrepreneur based in Estonia, witnessed both the untapped potential
+            of African producers and the growing appetite of European buyers for
+            ethical, high-quality goods. But he also saw the barriers — complex
+            regulations, cultural gaps, and a lack of trust stalling meaningful
+            trade. CrossGate Connect exists to bridge that gap. We’re more than
+            a trade company — we’re a connector of people, products, and
+            purpose. By guiding businesses through export readiness,
+            matchmaking, logistics, and compliance, we turn opportunities into
+            impact.
           </p>
           <div className="bg-[#876e4B]/10 p-4 rounded-lg border-l-4 border-[#876e4B]">
             <p className="italic text-[#4e3629]">
-              "I realized trade wasn't about borders, but about building the
-              right connections."
+              Because to us, trade isn’t just about goods — it’s about growth,
+              equity, and global connection.
             </p>
           </div>
         </motion.article>
@@ -87,18 +95,17 @@ const OurStory = () => {
           <div>
             <h3 className="text-2xl font-semibold mb-6">Our Vision</h3>
             <p className="text-xl mb-8 max-w-xl">
-              Creating a seamless Afro-Nordic trade ecosystem where quality
-              meets opportunity, and cultural understanding drives sustainable
-              business growth.
-            </p>
+             To build a fair, inclusive trade bridge between Africa and Europe — where producers thrive, communities grow, and partnerships create lasting impact.
 
+            </p>
+            <h3 className="text-xl font-semibold ">We see a future where:</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {visionValues.map(({ title, desc }) => (
+              {visionValues.map(({id,  desc }) => (
                 <div
-                  key={title}
+                  key={id}
                   className="bg-[#f4e9dc]/10 p-4 rounded-lg backdrop-blur-sm border border-[#f4e9dc]/20"
                 >
-                  <h4 className="font-bold text-lg mb-1">{title}</h4>
+                  <h4 className="font-bold text-lg mb-1"></h4>
                   <p className="text-xs md:text-sm">{desc}</p>
                 </div>
               ))}
@@ -122,8 +129,6 @@ const OurStory = () => {
           </div>
         </div>
       </motion.section>
-
-      <OurModelSection />
 
       <motion.div
         initial={{ opacity: 0 }}
