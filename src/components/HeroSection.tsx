@@ -1,21 +1,26 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
+import { useImagePreload } from "../hooks/useImagePreLoad";
 import HeroPhoto from "../assets/images/HeroPht.png";
+import { useMemo } from "react";
 
 const HeroSection = () => {
   const [heroRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+  const isImageLoaded = useImagePreload(HeroPhoto);
+
+  const backgroundStyle = useMemo(() => ({
+    backgroundImage: isVisible && isImageLoaded ? `url(${HeroPhoto})` : "none",
+    backgroundColor: "#f9f5f0",
+  }), [isVisible, isImageLoaded]);
 
   return (
     <div
       ref={heroRef}
       className="relative w-full min-h-screen bg-cover bg-center flex items-center justify-center py-14 md:py-0"
-      style={{
-        backgroundImage: isVisible ? `url(${HeroPhoto})` : "none",
-        backgroundColor: "#f9f5f0",
-      }}
+      style={backgroundStyle}
     >
-      <div className="" />
+      <div className="absolute inset-0 bg-black bg-opacity-40" aria-hidden="true" />
 
       <div className="relative z-10 flex flex-col items-center md:items-start w-full max-w-7xl px-6 md:px-12">
         <motion.div
