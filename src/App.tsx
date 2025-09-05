@@ -2,7 +2,7 @@ import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import OurModelSection from "./pages/about/OurModel";
+
 
 
 
@@ -27,7 +27,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
-        <Route path="/our-model" element={<OurModelSection/>}/>
+        <Route path="/our-model" element={<OurModel/>}/>
         <Route
           path="/sectors-and-product"
           element={<SectorsAndProductPage />}
