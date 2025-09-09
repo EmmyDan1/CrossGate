@@ -20,7 +20,7 @@ const HeroSection = () => {
       className="relative w-full min-h-screen bg-cover bg-center flex items-center justify-center py-14 md:py-0"
       style={backgroundStyle}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-40" aria-hidden="true" />
+
 
       <div className="relative z-10 flex flex-col items-center md:items-start w-full max-w-7xl px-6 md:px-12">
         <motion.div

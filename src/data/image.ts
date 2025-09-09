@@ -19,7 +19,7 @@ import TechHardWare from "../assets/images/ProcessedFood2.png";
 import IndustryMachine from "../assets/images/IndustryMachine.png";
 import ProcessedFood from "../assets/images/pharmecticals.png";
 import DiaryProduct from "../assets/images/DiaryProducts.png";
-import AfricanSpice from "../assets/images/AfricanSpices.png";
+import AfricanSpice from "../assets/images/AfricanSpices2.webp";
 import TradePfood from '../assets/images/TradePfood.png'
 import BambooProduct from "../assets/images/BambooProduct.jpg";
 import AfricanOil from "../assets/images/AfricanOil2.png";
