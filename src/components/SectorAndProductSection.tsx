@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const SectorsAndProducts = () => {
   const tradeDirections = [
     {
-      title: "From Estonia to Africa",
+      title: "From Europe to Africa",
       subtitle: "Nordic quality meeting African markets",
       products: [
         {
@@ -36,7 +36,7 @@ const SectorsAndProducts = () => {
       ],
     },
     {
-      title: "From Africa to Estonia",
+      title: "From Africa to Europe",
       subtitle: "African excellence reaching Nordic markets",
       products: [
         {
@@ -96,7 +96,7 @@ const SectorsAndProducts = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              {/* Section Heading */}
+     
               <div className="mb-8 text-center md:text-left">
                 <h3 className="text-2xl font-bold text-[#876e4B] mb-1">
                   {direction.title}
@@ -104,7 +104,7 @@ const SectorsAndProducts = () => {
                 <p className="text-[#5e4336]">{direction.subtitle}</p>
               </div>
 
-              {/* Compact Card Grid */}
+           
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {direction.products.map((product, idx) => (
                   <motion.div
@@ -112,7 +112,7 @@ const SectorsAndProducts = () => {
                     whileHover={{ y: -4, scale: 1.02 }}
                     className="bg-[#faf7f2] rounded-xl overflow-hidden shadow hover:shadow-lg transition-all duration-300 border border-[#e7dccf]"
                   >
-                    {/* Unified Image */}
+                   
                     <img
                       src={product.image}
                       alt={product.name}
@@ -120,7 +120,7 @@ const SectorsAndProducts = () => {
                       className="w-full h-36 object-cover rounded-t-xl"
                     />
 
-                    {/* Compact Text */}
+                  
                     <div className="p-4">
                       <h4 className="text-lg font-semibold text-[#4e3629] leading-snug">
                         {product.name}
