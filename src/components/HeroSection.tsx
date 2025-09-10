@@ -29,9 +29,9 @@ const HeroSection = () => {
               text-center md:text-left
             "
           >
-            Where <span className="text-gold">European Expertise </span>
+            Where <span className="text-whitte md:text-gold">European Expertise </span>
             <br className="hidden sm:block" />
-            Meets <span className="text-gold">African</span>{" "}
+            Meets <span className="text-whitte">African</span>{" "}
             <span className="text-[#f4e9dc]">Excellence</span>
           </h1>
           <p
