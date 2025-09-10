@@ -9,10 +9,14 @@ const HeroSection = () => {
   const [heroRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
   const isImageLoaded = useImagePreload(HeroPhoto);
 
-  const backgroundStyle = useMemo(() => ({
-    backgroundImage: isVisible && isImageLoaded ? `url(${HeroPhoto})` : "none",
-    backgroundColor: "#f9f5f0",
-  }), [isVisible, isImageLoaded]);
+  const backgroundStyle = useMemo(
+    () => ({
+      backgroundImage:
+        isVisible && isImageLoaded ? `url(${HeroPhoto})` : "none",
+      backgroundColor: "#f9f5f0",
+    }),
+    [isVisible, isImageLoaded]
+  );
 
   return (
     <div
@@ -27,28 +31,62 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center md:text-left max-w-xl"
+          className="w-full max-w-xl"
         >
-          <h1 className="text-[#f4e9dc] tracking-tight font-libre text-4xl md:text-5xl lg:text-[54px] font-bold mb-4 leading-tight">
+          {/* Heading */}
+          <h1
+            className="
+              text-[#f4e9dc]
+              tracking-tight
+              font-libre
+              text-3xl sm:text-4xl md:text-5xl lg:text-[54px]
+              font-extrabold
+              mb-6
+              leading-snug sm:leading-tight
+              text-center md:text-left
+            "
+          >
             Where <span className="text-[#d6bb9c]">European Expertise </span>
-            <br className="hidden md:block" />
+            <br className="hidden sm:block" />
             Meets <span className="text-[#d6bb9c]">African</span>{" "}
             <span className="text-[#f4e9dc]">Excellence</span>
           </h1>
 
-          <p className="text-[#f4e9dc] font-inter text-lg md:text-xl mb-8 max-w-md mx-auto md:mx-0">
+          {/* Subheading */}
+          <p
+            className="
+              text-[#f4e9dc]
+              font-inter
+              text-base sm:text-lg md:text-xl
+              font-medium
+              mb-10
+              max-w-md
+              mx-auto md:mx-0
+              leading-relaxed
+              text-center md:text-left
+            "
+          >
             Bridging Continents Through Trade, Insight, and Trust.
           </p>
 
-          <Link to="/contact">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-secondary text-primary px-8 py-3 rounded-lg font-medium text-[20px] transition-colors duration-300 shadow-lg hover:shadow-xl"
-            >
-              Partner with us
-            </motion.button>
-          </Link>
+          {/* Button */}
+          <div className="flex justify-center md:justify-start">
+            <Link to="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="
+                  bg-secondary text-primary
+                  px-8 py-3
+                  rounded-lg font-medium text-[20px]
+                  transition-colors duration-300
+                  shadow-lg hover:shadow-xl
+                "
+              >
+                Partner with us
+              </motion.button>
+            </Link>
+          </div>
         </motion.div>
       </div>
     </div>
