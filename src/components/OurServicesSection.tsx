@@ -36,7 +36,7 @@ const services = [
 
 const OurServicesSection = () => {
   return (
-    <section className="bg-secondary py-16 px-6 md:px-12 lg:px-16 text-center">
+    <section className="bg-lightbrown py-16 px-6 md:px-12 lg:px-16 text-center">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ const OurServicesSection = () => {
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: index * 0.12 }}
     viewport={{ once: true }}
-    className="bg-[#8a6b56] rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col "
+    className="bg-[#876f5e] rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col "
   >
     <div className="aspect-video h-32 overflow-hidden">
       <img

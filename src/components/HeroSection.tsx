@@ -1,31 +1,15 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
-import { useImagePreload } from "../hooks/useImagePreLoad";
-import HeroPhoto from "../assets/images/HeroPht.png";
-import { useMemo } from "react";
 
 const HeroSection = () => {
-  const [heroRef, isVisible] = useIntersectionObserver({ threshold: 0.1 });
-  const isImageLoaded = useImagePreload(HeroPhoto);
-
-  const backgroundStyle = useMemo(
-    () => ({
-      backgroundImage:
-        isVisible && isImageLoaded ? `url(${HeroPhoto})` : "none",
-      backgroundColor: "#f9f5f0",
-    }),
-    [isVisible, isImageLoaded]
-  );
-
   return (
     <div
-      ref={heroRef}
-      className="relative w-full min-h-screen bg-cover bg-center flex items-center justify-center py-14 md:py-0"
-      style={backgroundStyle}
+      className="    
+    relative w-full min-h-screen bg-cover bg-center flex items-center justify-center py-14 md:py-0
+    bg-[url('/images/HeroMobile1.png')]     
+    sm:bg-[url('/images/HeroTab.png')]  
+    lg:bg-[url('/images/HeroDesk.png')]"
     >
-
-
       <div className="relative z-10 flex flex-col items-center md:items-start w-full max-w-7xl px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -33,10 +17,9 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="w-full max-w-xl"
         >
-          {/* Heading */}
           <h1
             className="
-              text-[#f4e9dc]
+              text-whitte
               tracking-tight
               font-libre
               text-3xl sm:text-4xl md:text-5xl lg:text-[54px]
@@ -46,16 +29,14 @@ const HeroSection = () => {
               text-center md:text-left
             "
           >
-            Where <span className="text-[#d6bb9c]">European Expertise </span>
+            Where <span className="text-gold">European Expertise </span>
             <br className="hidden sm:block" />
-            Meets <span className="text-[#d6bb9c]">African</span>{" "}
+            Meets <span className="text-gold">African</span>{" "}
             <span className="text-[#f4e9dc]">Excellence</span>
           </h1>
-
-          {/* Subheading */}
           <p
             className="
-              text-[#f4e9dc]
+              text-grayWhite
               font-inter
               text-base sm:text-lg md:text-xl
               font-medium

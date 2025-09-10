@@ -28,7 +28,7 @@ const IntroStatsSection = () => {
     <section
       className="relative bg-lightbrown px-6 md:px-24 md:py-14 text-center overflow-hidden"
       style={{
-        clipPath: "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
+        clipPath: "polygon(0 0, 100% 0, 100% 99%, 0 100%)",
       }}
     >
 
