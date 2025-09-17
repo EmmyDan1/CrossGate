@@ -66,19 +66,19 @@ const Navbar = () => {
           {isHome ? (
             <img
               src={CGlogo2}
-              alt="CrossGate Logo"
+              alt="Karagateway Logo"
               className="w-12 h-12 md:w-16 md:h-16 object-contain"
               loading="lazy"
             />
           ) : (
             <img
               src={CGlogoBrown}
-              alt="CrossGate Logo"
+              alt="Karagateway Logo"
               className="w-12 h-12 md:w-16 md:h-16 object-contain"
               loading="lazy"
             />
           )}
-          <span className="text-xl md:text-2xl font-bold">CrossGate</span>
+          <span className="text-xl md:text-2xl font-bold">Karagateway</span>
         </Link>
 
         <div className="hidden md:flex gap-8 text-[16px] font-medium relative">

@@ -5,7 +5,7 @@ export const testimonials: Testimonial[] = [
     id: 1,
     name: 'Lars Bergström',
     role: 'Nordic Food Exporter (Sweden)',
-    content: 'CrossGate helped us navigate Nigerian import regulations effortlessly. Our first shipment cleared customs in 48 hours - unheard of speed!',
+    content: 'Karagateway helped us navigate Nigerian import regulations effortlessly. Our first shipment cleared customs in 48 hours - unheard of speed!',
     avatar: 'https://randomuser.me/api/portraits/men/65.jpg',
     rating: 5
   },
@@ -13,7 +13,7 @@ export const testimonials: Testimonial[] = [
     id: 2,
     name: 'Amina Diallo',
     role: 'Cashew Producer (Senegal)',
-    content: 'Through CrossGate, we connected with Finnish buyers paying 30% above local market rates. Life-changing for our cooperative.',
+    content: 'Through Karagateway, we connected with Finnish buyers paying 30% above local market rates. Life-changing for our cooperative.',
     avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
     rating: 5
   },
@@ -29,7 +29,7 @@ export const testimonials: Testimonial[] = [
     id: 4,
     name: 'Ngozi Okeke',
     role: 'Textile Manufacturer (Nigeria)',
-    content: 'Norwegian retailers found us through CrossGate. Now we export 500+ kg of premium Ankara fabrics monthly - all paperwork handled in-platform.',
+    content: 'Norwegian retailers found us through Karagateway. Now we export 500+ kg of premium Ankara fabrics monthly - all paperwork handled in-platform.',
     avatar: 'https://randomuser.me/api/portraits/women/63.jpg',
     rating: 5
   },

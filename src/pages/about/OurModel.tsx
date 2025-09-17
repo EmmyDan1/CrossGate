@@ -48,7 +48,7 @@ const OurModelSection = () => {
           className="text-center mb-16"
         >
           <h3 className="text-4xl font-bold text-[#4e3629] mb-6">
-            The CrossGate{" "}
+            The Karagateway{" "}
             <span className="text-[#876e4B]"> Connect Trade Loop </span>
           </h3>
           <p className="text-lg text-[#5e4229] max-w-3xl mx-auto">

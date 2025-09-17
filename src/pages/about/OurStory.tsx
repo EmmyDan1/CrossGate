@@ -15,11 +15,11 @@ const OurStory = () => {
   return (
     <motion.section className="bg-[#f4e9dc] py-20 px-6 lg:px-24">
       <motion.header {...fadeInUp} className="text-center mb-20 mt-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#4e3629] mb-6">
-          Rooted in Africa. Powered by Europe.{" "}
-          <span className="text-[#876e4B]">
-            Committed to equitable global trade.
-          </span>
+        <h2 className="text-4xl md:text-5xl font-bold text-[#4e3629] mb-">
+          Karagateway{" "}
+        </h2>
+        <h2 className="text-[#876e4B] text-4xl md:text-5xl font-bold ">
+          Connecting africa to the world
         </h2>
         {/* <p className="text-xl text-[#7a5c49] max-w-4xl mx-auto">
           "We connect Nordic exporters with Africa's growing markets — and
@@ -50,21 +50,19 @@ const OurStory = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-semibold text-[#876e4B] mb-4">
-            Founder's Journey
+          <h3 className="text-2xl font-bold text-[#4e3629] mb-4 font-poppins">
+            About Us
           </h3>
           <p className="text-[#4e3629] mb-6">
-            CrossGate Connect was born out of a lived experience — one that
-            spans cities, cultures, and continents. Our founder, a Nigerian
-            entrepreneur based in Estonia, witnessed both the untapped potential
-            of African producers and the growing appetite of European buyers for
-            ethical, high-quality goods. But he also saw the barriers — complex
-            regulations, cultural gaps, and a lack of trust stalling meaningful
-            trade. CrossGate Connect exists to bridge that gap. We’re more than
-            a trade company — we’re a connector of people, products, and
-            purpose. By guiding businesses through export readiness,
-            matchmaking, logistics, and compliance, we turn opportunities into
-            impact.
+            Karagateway simplifies international trade, helping African
+            producers reach global markets while enabling international
+            businesses to access opportunities across Africa. We provide expert
+            guidance, streamline cross-border operations, and empower businesses
+            on both sides to grow confidently. We bridge complex trade processes
+            with real opportunities, enabling businesses to focus on growth and
+            innovation. Through our expertise, networks, and advisory support,
+            we create seamless connections that benefit African producers and
+            global partners alike.
           </p>
           <div className="bg-[#876e4B]/10 p-4 rounded-lg border-l-4 border-[#876e4B]">
             <p className="italic text-[#4e3629]">
@@ -95,12 +93,12 @@ const OurStory = () => {
           <div>
             <h3 className="text-2xl font-semibold mb-6">Our Vision</h3>
             <p className="text-xl mb-8 max-w-xl">
-             To build a fair, inclusive trade bridge between Africa and Europe — where producers thrive, communities grow, and partnerships create lasting impact.
-
+              Connecting Africa and the world through trade, opportunity, and
+              innovation that empowers communities and showcases excellence.
             </p>
             <h3 className="text-xl font-semibold ">We see a future where:</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {visionValues.map(({id,  desc }) => (
+              {visionValues.map(({ id, desc }) => (
                 <div
                   key={id}
                   className="bg-[#f4e9dc]/10 p-4 rounded-lg backdrop-blur-sm border border-[#f4e9dc]/20"

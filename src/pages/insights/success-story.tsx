@@ -8,7 +8,7 @@ const SuccessStories = () => {
       type: "video",
       title: "Estonian Tomato Processor Expands to West Africa",
       excerpt: "How we helped TomaTech increase exports by 140% in 18 months",
-      quote: "CrossGate's market insights helped us avoid costly mistakes in Nigeria's retail sector.",
+      quote: "Karagateway's market insights helped us avoid costly mistakes in Nigeria's retail sector.",
       author: "Kati Jõgi, CEO TomaTech",
       stats: ["140% export growth", "12 new distributor partnerships", "€2.8M annual revenue"]
     },
@@ -24,7 +24,7 @@ const SuccessStories = () => {
 
   const testimonials = [
     {
-      quote: "We doubled our African distribution network in 9 months through CrossGate's partner matching.",
+      quote: "We doubled our African distribution network in 9 months through Karagateway's partner matching.",
       author: "Andres Kask, Export Manager",
       company: "Nordic Dairy Collective"
     },

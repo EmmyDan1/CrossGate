@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold">CrossGate</h2>
+            <h2 className="text-3xl font-bold">Karagateway</h2>
             <p className="text-secondary text-sm max-w-xs">
               Bridging opportunities through innovative trade solutions
             </p>
@@ -90,10 +90,10 @@ const Footer = () => {
               <li className="flex items-start">
                 <EnvelopeIcon className="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" />
                 <a
-                  href="mailto:CrossGate@gmail.com"
+                  href="mailto:Karagateway@gmail.com"
                   className="hover:text-secondary transition-colors text-sm"
                 >
-                  CrossGate@gmail.com
+                  Karagateway@gmail.com
                 </a>
               </li>
               <li className="flex items-start">
@@ -108,7 +108,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-secondary mt-12 pt-8 text-center text-sm text-secondary">
-          <p>© {new Date().getFullYear()} CrossGate. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Karagateway. All rights reserved.</p>
         </div>
       </div>
     </footer>

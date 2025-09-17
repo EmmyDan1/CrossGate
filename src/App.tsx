@@ -2,14 +2,13 @@ import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
-
-
+import StartTradeJourney from "./components/StartYourTrade";
+import PartnerWithUs from "./components/PartnerWithUs";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const OurStory = lazy(() => import("./pages/about/OurStory"));
 const HowItWorks = lazy(() => import("./pages/about/HowItWorks"));
-const OurModel = lazy(() => import("./pages/about/OurModel"))
+const OurModel = lazy(() => import("./pages/about/OurModel"));
 const SectorsAndProductPage = lazy(
   () => import("./pages/SectorsAndProductPage")
 );
@@ -27,7 +26,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
-        <Route path="/our-model" element={<OurModel/>}/>
+        <Route path="/our-model" element={<OurModel />} />
         <Route
           path="/sectors-and-product"
           element={<SectorsAndProductPage />}
@@ -37,6 +36,8 @@ function App() {
         <Route path="/insights/success-story" element={<SuccessStories />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/start-trade-journey" element={<StartTradeJourney />} />
+        <Route path="/partner-with-us" element={<PartnerWithUs />} />
       </Routes>
       {/* <Suspense fallback={<LoadingSpinner />}>
       </Suspense> */}

@@ -68,7 +68,7 @@ const BlogSection = () => {
       )
     },
     {
-      title: "CrossGate Market Entry Checklist",
+      title: "Karagateway Market Entry Checklist",
       excerpt: "Field-tested 12-point checklist for Nordic-African market expansion.",
       category: "Resource",
       date: "February 18, 2023",

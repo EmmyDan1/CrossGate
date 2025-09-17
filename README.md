@@ -1,12 +1,12 @@
-# 🌍 CrossGate – Trade Without Borders
+# 🌍 Karagateway – Trade Without Borders
 
-CrossGate is a modern, responsive frontend website that bridges Nordic exporters with Africa’s growing markets — and connects African producers with high-value European buyers. Built for a mission-driven trade organization, the site promotes transparency, trust, and partnership through a sleek digital experience.
+Karagateway is a modern, responsive frontend website that bridges Nordic exporters with Africa’s growing markets — and connects African producers with high-value European buyers. Built for a mission-driven trade organization, the site promotes transparency, trust, and partnership through a sleek digital experience.
 
 ---
 
 ## 🔗 Live Site
 
-**[https://crossgate.vercel.app](https://crossgate.vercel.app)
+**[https://Karagateway.vercel.app](https://Karagateway.vercel.app)
 
 ---
 
@@ -52,8 +52,8 @@ main.tsx → Entry point
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/EmmyDan1/CrossGate.git
-cd CrossGate
+git clone https://github.com/EmmyDan1/Karagateway.git
+cd Karagateway
 
 # 2. Install dependencies
 npm install
@@ -64,7 +64,7 @@ npm run dev
 
 📬 Contact and get started
 Let’s build trade pathways together.
-You can reach CrossGate via:
+You can reach Karagateway via:
 
 💬 WhatsApp: +234 09131276935
 

@@ -32,7 +32,7 @@ const MobileSidebar = ({ open, setOpen }: SidebarProps) => {
           }`}
       >
         <div className="flex justify-between items-center px-6 py-5">
-          <span className="text-xl font-semibold text-primary">CrossGate</span>
+          <span className="text-xl font-semibold text-primary">Karagateway</span>
           <button
             onClick={() => setOpen(false)}
             className="text-[#f4e9dc] hover:text-white transition-colors"

@@ -5,66 +5,71 @@ const HeroSection = () => {
   return (
     <div
       className="    
-    relative w-full min-h-screen bg-cover bg-center flex items-center justify-center py-14 md:py-0
+    relative w-full min-h-screen bg-cover bg-[center_top_15%] flex items-center justify-center py-14 md:py-0
     bg-[url('/images/HeroMobile1.png')]     
     sm:bg-[url('/images/HeroTab.png')]  
     lg:bg-[url('/images/HeroDesk.png')]"
     >
-      <div className="relative z-10 flex flex-col items-center md:items-start w-full max-w-7xl px-6 md:px-12">
+      <div className="relative z-10 flex flex-col items-center w-full max-w-4xl px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full max-w-xl"
+          className="w-full text-center"
         >
           <h1
             className="
-              text-whitte
+              text-white
               tracking-tight
               font-libre
               text-3xl sm:text-4xl md:text-5xl lg:text-[54px]
               font-extrabold
               mb-6
-              leading-snug sm:leading-tight
-              text-center md:text-left
+              leading-tight
+              
             "
           >
-            Where <span className="text-whitte md:text-gold">European Expertise </span>
-            <br className="hidden sm:block" />
-            Meets <span className="text-whitte">African</span>{" "}
-            <span className="text-[#f4e9dc]">Excellence</span>
+            Where{" "}
+            <span className="text-[#765937]">
+              Global Innovations and Opportunities{" "}
+            </span>
+            Meets <span className="text-[#d6bb9c]">African</span>{" "}
+            <span className="text-white">Excellence</span>
           </h1>
           <p
             className="
-              text-grayWhite
+              text-[#f4e9dc]
               font-inter
               text-base sm:text-lg md:text-xl
               font-medium
               mb-10
               max-w-md
-              mx-auto md:mx-0
-              leading-relaxed
-              text-center md:text-left
+              mx-auto
+              md:leading-relaxed 
+
+
             "
           >
-            Bridging Continents Through Trade, Insight, and Trust.
+            We help businesses across continents discover new markets, forge
+            partnerships, and grow sustainably.
           </p>
 
           {/* Button */}
-          <div className="flex justify-center md:justify-start">
-            <Link to="/contact">
+          <div className="flex justify-center">
+            <Link to="/start-trade-journey">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="
-                  bg-secondary text-primary
+                  bg-[#d6bb9c] text-[#765937]
                   px-8 py-3
-                  rounded-lg font-medium text-[20px]
+                  rounded-lg font-medium text-lg md:text-xl
                   transition-colors duration-300
                   shadow-lg hover:shadow-xl
+                  font-playfair
                 "
               >
-                Partner with us
+                Start your trade Journey
               </motion.button>
             </Link>
           </div>
