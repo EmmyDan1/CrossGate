@@ -1,6 +1,6 @@
 # 🌍 Karagateway – Trade Without Borders
 
-Karagateway is a modern, responsive frontend website that bridges Nordic exporters with Africa’s growing markets — and connects African producers with high-value European buyers. Built for a mission-driven trade organization, the site promotes transparency, trust, and partnership through a sleek digital experience.
+Karagateway is a modern, responsive frontend website that bridges Nordic exporters with Africa’s growing markets   and connects African producers with high-value European buyers. Built for a mission-driven trade organization, the site promotes transparency, trust, and partnership through a sleek digital experience.
 
 ---
 
@@ -71,6 +71,6 @@ You can reach Karagateway via:
 📧 Email: emmydan68@gmail.com
 
 📌 Status
-🧪 Still under development — backend integration & blog system coming soon.
+🧪 Still under development   backend integration & blog system coming soon.
 ✨ Frontend is ready for deployment and stakeholder presentation.
 

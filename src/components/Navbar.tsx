@@ -118,11 +118,11 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to="/sectors-and-product" className="">
-            Sectors
-          </Link>
           <Link to="/services" className="">
             Services
+          </Link>
+          <Link to="/sectors-and-product" className="">
+            Sectors
           </Link>
 
           {/* Insights Dropdown */}

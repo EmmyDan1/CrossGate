@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { EstoniaToAfrica } from "../data/image";
 import { AfricaToEstonia } from "../data/image";
-import { Link } from "react-router-dom";
+import { Button } from "./ui/Button";
 
 const SectorsAndProducts = () => {
   const tradeDirections = [
@@ -96,7 +96,6 @@ const SectorsAndProducts = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-     
               <div className="mb-8 text-center md:text-left">
                 <h3 className="text-2xl font-bold text-[#876e4B] mb-1">
                   {direction.title}
@@ -104,7 +103,6 @@ const SectorsAndProducts = () => {
                 <p className="text-[#5e4336]">{direction.subtitle}</p>
               </div>
 
-           
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {direction.products.map((product, idx) => (
                   <motion.div
@@ -112,7 +110,6 @@ const SectorsAndProducts = () => {
                     whileHover={{ y: -4, scale: 1.02 }}
                     className="bg-[#faf7f2] rounded-xl overflow-hidden shadow hover:shadow-lg transition-all duration-300 border border-[#e7dccf]"
                   >
-                   
                     <img
                       src={product.image}
                       alt={product.name}
@@ -120,7 +117,6 @@ const SectorsAndProducts = () => {
                       className="w-full h-36 object-cover rounded-t-xl"
                     />
 
-                  
                     <div className="p-4">
                       <h4 className="text-lg font-semibold text-[#4e3629] leading-snug">
                         {product.name}
@@ -140,15 +136,7 @@ const SectorsAndProducts = () => {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <h3 className="text-xl font-semibold text-[#4e3629] mb-4">
-            Don't see your product category listed?
-          </h3>
-
-          <Link to="/contact?type=partner">
-            <button className="px-8 py-3 bg-[#876e4B] text-[#f4e9dc] rounded-lg font-medium hover:bg-[#9a7f58] transition-colors">
-              Request Custom Trade Matchmaking
-            </button>
-          </Link>
+          <Button />
         </motion.div>
       </div>
     </section>

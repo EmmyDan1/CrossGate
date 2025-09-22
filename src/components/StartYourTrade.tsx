@@ -53,12 +53,12 @@ const StartTradeJourney = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f4e9dc] py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#f4e9dc] py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-[#4e3629] mb-4">Start Your Trade Journey</h1>
           <p className="text-lg text-[#4e3629]/80">
-            Bringing the world's innovations to Africa — and Africa's excellence to the world through trade.
+            Bringing the world's innovations to Africa   and Africa's excellence to the world through trade.
           </p>
         </div>
 

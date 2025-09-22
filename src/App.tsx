@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import StartTradeJourney from "./components/StartYourTrade";
 import PartnerWithUs from "./components/PartnerWithUs";
+import JoinOurNetwork from "./components/JoinOurNetwork";
+import TermsPage from "./components/TermsPage";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const OurStory = lazy(() => import("./pages/about/OurStory"));
@@ -17,6 +19,7 @@ const BlogSection = lazy(() => import("./pages/insights/Blog"));
 const SuccessStories = lazy(() => import("./pages/insights/success-story"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const Team = lazy(() => import("./pages/about/Team"));
+
 
 function App() {
   return (
@@ -38,6 +41,9 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/start-trade-journey" element={<StartTradeJourney />} />
         <Route path="/partner-with-us" element={<PartnerWithUs />} />
+        <Route path="/join-network" element={<JoinOurNetwork />} />
+        <Route path="/terms" element={<TermsPage/>} />
+     
       </Routes>
       {/* <Suspense fallback={<LoadingSpinner />}>
       </Suspense> */}

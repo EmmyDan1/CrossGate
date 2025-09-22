@@ -22,7 +22,7 @@ const OurStory = () => {
           Connecting africa to the world
         </h2>
         {/* <p className="text-xl text-[#7a5c49] max-w-4xl mx-auto">
-          "We connect Nordic exporters with Africa's growing markets — and
+          "We connect Nordic exporters with Africa's growing markets   and
           African producers with high-value European buyers."
         </p> */}
       </motion.header>
@@ -66,7 +66,7 @@ const OurStory = () => {
           </p>
           <div className="bg-[#876e4B]/10 p-4 rounded-lg border-l-4 border-[#876e4B]">
             <p className="italic text-[#4e3629]">
-              Because to us, trade isn’t just about goods — it’s about growth,
+              Because to us, trade isn’t just about goods it’s about growth,
               equity, and global connection.
             </p>
           </div>
