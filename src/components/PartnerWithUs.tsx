@@ -84,7 +84,7 @@ const PartnerWithUs = () => {
         </div>
 
         {/* Intro Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
+        <div className="bg-secondary rounded-2xl shadow-lg p-8 mb-16">
           <p className="text-lg text-[#4e3629] leading-relaxed text-center">
             Karagateway partners with producers, exporters, importers, and
             service providers to create seamless trade opportunities across
@@ -105,7 +105,7 @@ const PartnerWithUs = () => {
             {partnerTypes.map((partner, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow"
+                className="bg-secondary rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow"
               >
                 <div className="flex justify-center mb-4">{partner.icon}</div>
                 <h3 className="text-xl font-semibold text-[#4e3629] mb-2">
@@ -134,7 +134,7 @@ const PartnerWithUs = () => {
         </div>
 
         {/* Contact Options Tabs */}
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-16">
+        <div className="bg-secondary rounded-2xl shadow-lg overflow-hidden mb-16">
           <div className="p-6">
             {isSubmitted ? (
               <div className="text-center py-8">
@@ -168,7 +168,7 @@ const PartnerWithUs = () => {
                   value="https://yourdomain.com/thank-you"
                 />{" "}
                 {/* Optional: Redirect after submit */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
                   <div>
                     <label className="block text-sm font-medium text-[#4e3629] mb-2">
                       Company/Organization name *
@@ -179,7 +179,7 @@ const PartnerWithUs = () => {
                       value={formData.companyName}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
+                      className="w-full bg-secondary px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
                     />
                   </div>
 
@@ -192,7 +192,7 @@ const PartnerWithUs = () => {
                       value={formData.partnershipType}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
+                      className="w-full bg-secondary px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
                     >
                       <option value="">Select partnership type</option>
                       <option value="producer">Producer & Supplier</option>
@@ -217,7 +217,7 @@ const PartnerWithUs = () => {
                       value={formData.contactPerson}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
+                      className="w-full bg-secondary px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
                     />
                   </div>
 
@@ -231,7 +231,7 @@ const PartnerWithUs = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
+                      className="w-full bg-secondary px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -244,7 +244,7 @@ const PartnerWithUs = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
+                    className="w-full bg-secondary px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -257,7 +257,7 @@ const PartnerWithUs = () => {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="w-full px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
+                    className="w-full bg-secondary px-4 py-3 border border-[#d6bb9c] rounded-lg focus:ring-2 focus:ring-[#4e3629] focus:border-transparent"
                   ></textarea>
                 </div>
                 <div>
