@@ -117,7 +117,7 @@ const Contact = () => {
                 disabled={isLoading}
                 className="w-full flex justify-center py-3 px-4 rounded-md shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors bg-primary text-secondary hover:bg-[#9a7f58]"
               >
-                {isLoading ? "Sending..." : "Get Started"}
+                {isLoading ? "Sending..." : "Submit"}
               </button>
             </div>
           </form>
