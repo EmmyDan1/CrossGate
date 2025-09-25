@@ -7,13 +7,14 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-     "preview": "vite preview",
+    "preview": "vite preview",
     "prebuild": "chmod +x node_modules/.bin/vite || true"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.2.0",
     "framer-motion": "^12.19.1",
     "lucide-react": "^0.544.0",

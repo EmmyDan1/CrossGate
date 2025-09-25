@@ -24,10 +24,16 @@ const Footer = () => {
               <a href="http://@karagateway" aria-label="Twitter">
                 <FaTwitter className="w-5 h-5 text-white hover:text-secondary" />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61580678617699" aria-label="Facebook">
+              <a
+                href="https://www.facebook.com/profile.php?id=61580678617699"
+                aria-label="Facebook"
+              >
                 <FaFacebookF className="w-5 h-5 text-white hover:text-secondary" />
               </a>
-              <a href="https://www.linkedin.com/company/109096257/admin/dashboard/" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/company/109096257/admin/dashboard/"
+                aria-label="LinkedIn"
+              >
                 <FaLinkedinIn className="w-5 h-5 text-white hover:text-secondary" />
               </a>
               <a href="http://karagateway" aria-label="Instagram">
@@ -41,16 +47,38 @@ const Footer = () => {
               Navigation
             </h3>
             <ul className="space-y-3">
-              {["About", "Blog", "Services", "Contact"].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="hover:text-secondary transition-colors text-sm"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="/our-story"
+                  className="hover:text-secondary transition-colors text-sm"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/insights/blog"
+                  className="hover:text-secondary transition-colors text-sm"
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/services"
+                  className="hover:text-secondary transition-colors text-sm"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/partner-with-us"
+                  className="hover:text-secondary transition-colors text-sm"
+                >
+                  Partner with us
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -58,7 +86,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 border-b border-secondary pb-2">
               Legal
             </h3>
-<FooterLinks/>
+            <FooterLinks />
           </div>
 
           <div>

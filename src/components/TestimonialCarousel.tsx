@@ -95,7 +95,7 @@ const TestimonialCarousel: React.FC = () => {
               key={testimonial.id}
               className="flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-[45vw] lg:w-[30vw] snap-center"
             >
-              <div className="bg-white p-6 rounded-3xl shadow-md h-full flex flex-col transition-all duration-300 hover:shadow-lg group">
+              <div className="bg-lightbrown p-6 rounded-3xl shadow-md h-full flex flex-col transition-all duration-300 hover:shadow-lg group">
                 {/* Avatar bubble */}
                 <div className="relative -mt-8 mb-4 self-center">
                   <div className="absolute -inset-1 bg-[#876e4B] rounded-full blur-sm opacity-30 group-hover:opacity-50 transition-opacity"></div>
@@ -107,7 +107,7 @@ const TestimonialCarousel: React.FC = () => {
                 </div>
 
                 {/* Content bubble */}
-                <div className="bg-white rounded-2xl p-5 flex-grow flex flex-col">
+                <div className="bg-lightbrown rounded-2xl p-5 flex-grow flex flex-col">
                   <div className="text-center mb-3">
                     <h3 className="text-lg font-semibold text-[#4e3629]">
                       {testimonial.name}

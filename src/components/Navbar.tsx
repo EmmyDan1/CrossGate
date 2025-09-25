@@ -92,7 +92,7 @@ const Navbar = () => {
               About <FiChevronDown size={16} className="mt-1" />
             </button>
             {aboutDropdown && (
-              <div className="absolute top-full text-md left-0 mt-2 w-48 h-36 bg-black/70 text-white rounded-md shadow-lg py-2 z-50">
+              <div className="absolute top-full text-md left-0 mt-2 w-40  bg-black/70 text-white rounded-md shadow-lg py-2 z-50">
                 <Link
                   to="/our-story"
                   className="block px-4 py-1 hover:bg-black/50"
@@ -105,12 +105,12 @@ const Navbar = () => {
                 >
                   Our Model
                 </Link>
-                <Link
+                {/* <Link
                   to="/how-it-works"
                   className="block px-4 py-1 hover:bg-black/50"
                 >
                   How It Works
-                </Link>
+                </Link> */}
                 <Link to="/team" className="block px-4 py-1 hover:bg-black/50">
                   Team
                 </Link>
@@ -135,7 +135,7 @@ const Navbar = () => {
               Insights <FiChevronDown size={16} className="mt-1" />
             </button>
             {insightsDropdown && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-black/70 text-white rounded-md shadow-md py-2 z-50">
+              <div className="absolute top-full left-0 mt-2 w-40 bg-black/70 text-white rounded-md shadow-md py-2 z-50">
                 <Link
                   to="/insights/blog"
                   className="block px-4 py-2 hover:bg-black/50"

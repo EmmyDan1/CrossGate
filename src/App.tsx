@@ -6,6 +6,7 @@ import StartTradeJourney from "./components/StartYourTrade";
 import PartnerWithUs from "./components/PartnerWithUs";
 import JoinOurNetwork from "./components/JoinOurNetwork";
 import TermsPage from "./components/TermsPage";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 const Homepage = lazy(() => import("./pages/Homepage"));
 const OurStory = lazy(() => import("./pages/about/OurStory"));
@@ -43,6 +44,8 @@ function App() {
         <Route path="/partner-with-us" element={<PartnerWithUs />} />
         <Route path="/join-network" element={<JoinOurNetwork />} />
         <Route path="/terms" element={<TermsPage/>} />
+        <Route path="/privacy" element={<PrivacyPolicy/>} />
+
      
       </Routes>
       {/* <Suspense fallback={<LoadingSpinner />}>

@@ -19,7 +19,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="w-full text-center"
         >
-          {/* Headline */}
+          {/* Headline - Fixed for Mobile */}
           <h1
             className="
               text-slate-200
@@ -28,15 +28,18 @@ const HeroSection = () => {
               text-3xl sm:text-4xl md:text-5xl lg:text-[54px]
               font-extrabold
               mb-6
-              leading-snug sm:leading-tight
+              leading-tight sm:leading-tight
             "
           >
-            Where <br className="block sm:hidden" />
-            <span className="block sm:inline">
-              Global Innovations and Opportunities
-            </span>{" "}
-            <br className="block sm:hidden" />
-            Meets <span className="">African Excellence</span>
+            <span className="block">
+              Where Global Innovations
+            </span>
+            <span className="block">
+              and Opportunities Meet
+            </span>
+            <span className="block mt-1">
+              African Excellence
+            </span>
           </h1>
 
           {/* Subtitle */}
