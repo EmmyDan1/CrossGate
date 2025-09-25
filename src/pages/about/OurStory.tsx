@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { FounderImg, VisionImg } from "../../data/image";
 import { Button } from "../../components/ui/Button";
 import visionValues from "../../data/dataOurStory";
 
@@ -43,7 +42,39 @@ const OurStory = () => {
         </h2>
       </motion.header>
 
-      {/* Mission Section */}
+      {/* About Us Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mb-16"
+      >
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-3xl font-bold text-[#4e3629] mb-6 text-center">About Us</h3>
+          <div className="bg-secondary rounded-2xl p-8 shadow-lg">
+            <p className="text-[#4e3629] mb-6 text-lg leading-relaxed">
+              Karagateway simplifies international trade, helping African
+              producers reach global markets while enabling international
+              businesses to access opportunities across Africa. We provide expert
+              guidance, streamline cross-border operations, and empower businesses
+              on both sides to grow confidently. We bridge complex trade processes
+              with real opportunities, enabling businesses to focus on growth and
+              innovation. Through our expertise, networks, and advisory support,
+              we create seamless connections that benefit African producers and
+              global partners alike.
+            </p>
+            <div className="bg-[#876e4B]/10 p-4 rounded-lg border-l-4 border-[#876e4B]">
+              <p className="italic text-[#4e3629]">
+                Because to us, trade isn't just about goods it's about growth,
+                equity, and global connection.
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Mission Section - Moved below About Us */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -60,52 +91,6 @@ const OurStory = () => {
           </p>
         </div>
       </motion.div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="relative"
-        >
-          <div className="absolute -inset-4 border-2 border-[#876e4B] rounded-lg"></div>
-          <img
-            src={FounderImg}
-            alt="Founder"
-            loading="lazy"
-            className="relative z-10 rounded-lg w-full h-96 object-cover"
-          />
-        </motion.div>
-
-        <motion.article
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl font-bold text-[#4e3629] mb-4 font-poppins">
-            About Us
-          </h3>
-          <p className="text-[#4e3629] mb-6">
-            Karagateway simplifies international trade, helping African
-            producers reach global markets while enabling international
-            businesses to access opportunities across Africa. We provide expert
-            guidance, streamline cross-border operations, and empower businesses
-            on both sides to grow confidently. We bridge complex trade processes
-            with real opportunities, enabling businesses to focus on growth and
-            innovation. Through our expertise, networks, and advisory support,
-            we create seamless connections that benefit African producers and
-            global partners alike.
-          </p>
-          <div className="bg-[#876e4B]/10 p-4 rounded-lg border-l-4 border-[#876e4B]">
-            <p className="italic text-[#4e3629]">
-              Because to us, trade isn't just about goods it's about growth,
-              equity, and global connection.
-            </p>
-          </div>
-        </motion.article>
-      </div>
 
       {/* Values Section */}
       <motion.section
@@ -159,31 +144,22 @@ const OurStory = () => {
         </div>
       </motion.section>
 
-      {/* Vision Section */}
+      {/* Vision Section - Images Removed */}
       <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="relative overflow-hidden bg-[#876e4B] text-[#f4e9dc] rounded-2xl mb-24"
+        className="mb-16"
       >
-        <div className="absolute inset-0 z-0 opacity-20">
-          <img
-            src={VisionImg}
-            alt="Vision Background"
-            loading="lazy"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 p-10">
-          <div>
-            <h3 className="text-2xl font-semibold mb-6">Our Vision</h3>
-            <p className="text-xl mb-8 max-w-xl">
+        <div className="bg-[#876e4B] text-[#f4e9dc] rounded-2xl p-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-3xl font-semibold mb-6">Our Vision</h3>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
               Connecting Africa and the world through trade, opportunity, and
               innovation that empowers communities and showcases excellence.
             </p>
-            <h3 className="text-xl font-semibold mb-4">
+            <h3 className="text-xl font-semibold mb-6">
               We see a future where:
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -192,30 +168,15 @@ const OurStory = () => {
                   key={id}
                   className="bg-[#f4e9dc]/10 p-4 rounded-lg backdrop-blur-sm border border-[#f4e9dc]/20"
                 >
-                  <p className="text-xs md:text-sm">{desc}</p>
+                  <p className="text-sm">{desc}</p>
                 </div>
               ))}
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center">
-            <div className="relative w-full h-64 lg:h-full rounded-lg overflow-hidden shadow-2xl border-4 border-[#f4e9dc]">
-              <img
-                src={VisionImg}
-                alt="Afro-Nordic trade connection"
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#876e4B]/80 to-transparent flex items-end p-6">
-                <p className="text-[#f4e9dc] font-medium italic">
-                  "Bridging continents through commerce"
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </motion.section>
 
+      {/* CTA Section */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
