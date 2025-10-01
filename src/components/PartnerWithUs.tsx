@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   FaIndustry,
   FaShoppingCart,
@@ -18,6 +19,7 @@ const PartnerWithUs = () => {
     businessDescription: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -28,13 +30,27 @@ const PartnerWithUs = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
-    // In a real application, you would send this data to your backend
-    console.log("Form data:", formData);
-    setIsSubmitted(true);
-  };
+    setIsLoading(true);
 
+    try {
+      await emailjs.sendForm(
+        "service_pul5dtb", 
+        "template_3dpsi6e", 
+        e.target, 
+        "ge55ESt2Hz4cBeS9S"
+      );
+
+      setIsSubmitted(true);
+      e.target.reset();
+    } catch (error) {
+      console.error("Failed to send:", error);
+      alert("There was an error sending your message. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
   const partnerTypes = [
     {
       type: "Producers & Suppliers",
@@ -148,12 +164,7 @@ const PartnerWithUs = () => {
                 </p>
               </div>
             ) : (
-              <form
-                onSubmit={handleSubmit}
-                action="https://formsubmit.co/your-custom-email@domain.com" // REPLACE WITH YOUR ACTUAL EMAIL
-                method="POST"
-                className="space-y-6"
-              >
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* FormSubmit Configuration */}
                 <input
                   type="hidden"
@@ -171,7 +182,7 @@ const PartnerWithUs = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
                   <div>
                     <label className="block text-sm font-medium text-[#4e3629] mb-2">
-                      Company/Organization name *
+                      Company/Organization name 
                     </label>
                     <input
                       type="text"
@@ -185,7 +196,7 @@ const PartnerWithUs = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-[#4e3629] mb-2">
-                      Type of partnership *
+                      Type of partnership 
                     </label>
                     <select
                       name="partnershipType"
@@ -209,7 +220,7 @@ const PartnerWithUs = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-[#4e3629] mb-2">
-                      Contact person *
+                      Contact person 
                     </label>
                     <input
                       type="text"
@@ -223,7 +234,7 @@ const PartnerWithUs = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-[#4e3629] mb-2">
-                      Email *
+                      Email 
                     </label>
                     <input
                       type="email"
@@ -249,7 +260,7 @@ const PartnerWithUs = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-[#4e3629] mb-2">
-                    Short description of your business or interest *
+                    Short description of your business or interest 
                   </label>
                   <textarea
                     name="businessDescription"
@@ -281,9 +292,10 @@ const PartnerWithUs = () => {
                 </div>
                 <button
                   type="submit"
+                  disabled={isLoading}
                   className="w-full bg-[#4e3629] text-white py-3 px-6 rounded-lg font-medium hover:bg-[#3a281f] transition-colors duration-300"
                 >
-                  Submit Information
+                  {isLoading ? 'Sending...' : 'Submit Application'}
                 </button>
               </form>
             )}

@@ -128,13 +128,7 @@ const MobileSidebar = ({ open, setOpen }: SidebarProps) => {
                 >
                   Blog
                 </Link>
-                <Link
-                  to="/insights/success-story"
-                  onClick={() => setOpen(false)}
-                  className="block px-4 py-2 text-[#4e3629] rounded-lg hover:bg-[#876e4B]/10 transition-colors"
-                >
-                  Success Stories
-                </Link>
+
               </div>
             )}
           </div>

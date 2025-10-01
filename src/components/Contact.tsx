@@ -1,12 +1,32 @@
 import { useState } from "react";
 import ContactClick from "./ui/ContactClick";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e:any) => {
+    e.preventDefault();
     setIsLoading(true);
+
+    try {
+      await emailjs.sendForm(
+        "service_pul5dtb", 
+        "template_dgiiunr", 
+        e.target, 
+        "ge55ESt2Hz4cBeS9S"
+      );
+
+      setIsSubmitted(true);
+      // Reset form
+      e.target.reset();
+    } catch (error) {
+      console.error("Failed to send:", error);
+      alert("There was an error sending your message. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -23,12 +43,7 @@ const Contact = () => {
 
         {!isSubmitted ? (
           <form
-            action="https://formsubmit.co/Info@karagateway.com" 
-            method="POST"
-            onSubmit={() => {
-              handleSubmit();
-              setIsSubmitted(true);
-            }}
+            onSubmit={handleSubmit}
             className="space-y-6 bg-whitte p-8 rounded-lg shadow-sm border border-secondary"
           >
             <input
@@ -41,7 +56,10 @@ const Contact = () => {
 
             {/* Name */}
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-tertiary">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-tertiary"
+              >
                 Full Name *
               </label>
               <input
@@ -55,7 +73,10 @@ const Contact = () => {
 
             {/* Company */}
             <div>
-              <label htmlFor="company" className="block text-sm font-medium text-tertiary">
+              <label
+                htmlFor="company"
+                className="block text-sm font-medium text-tertiary"
+              >
                 Company *
               </label>
               <input
@@ -69,7 +90,10 @@ const Contact = () => {
 
             {/* Region */}
             <div>
-              <label htmlFor="region" className="block text-sm font-medium text-tertiary">
+              <label
+                htmlFor="region"
+                className="block text-sm font-medium text-tertiary"
+              >
                 Region *
               </label>
               <input
@@ -84,7 +108,10 @@ const Contact = () => {
 
             {/* Trade Interest */}
             <div>
-              <label htmlFor="interest" className="block text-sm font-medium text-tertiary">
+              <label
+                htmlFor="interest"
+                className="block text-sm font-medium text-tertiary"
+              >
                 Trade Interest *
               </label>
               <textarea
@@ -98,7 +125,10 @@ const Contact = () => {
 
             {/* Email */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-tertiary">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-tertiary"
+              >
                 Email Address *
               </label>
               <input
@@ -138,14 +168,34 @@ const Contact = () => {
             Or reach out directly:
           </h3>
           <div className="flex flex-col items-center space-y-3 mt-6 text-primary">
-          <ContactClick />
+            <ContactClick />
             <p>📍 Ehitajate tee 60, 12191 Tallinn, Estonia</p>
 
             <div className="flex flex-wrap justify-center gap-6 mt-4">
-              <a href="https://www.linkedin.com/company/109096257/admin/dashboard/" className="hover:opacity-80 transition-opacity">LinkedIn</a>
-              <a href="http://@karagateway" className="hover:opacity-80 transition-opacity">Twitter</a>
-              <a href="http://karagateway" className="hover:opacity-80 transition-opacity">Instagram</a>
-              <a href="https://www.facebook.com/profile.php?id=61580678617699" className="hover:opacity-80 transition-opacity">Facebook</a>
+              <a
+                href="https://www.linkedin.com/company/109096257/admin/dashboard/"
+                className="hover:opacity-80 transition-opacity"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="http://@karagateway"
+                className="hover:opacity-80 transition-opacity"
+              >
+                Twitter
+              </a>
+              <a
+                href="http://karagateway"
+                className="hover:opacity-80 transition-opacity"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61580678617699"
+                className="hover:opacity-80 transition-opacity"
+              >
+                Facebook
+              </a>
             </div>
           </div>
         </div>

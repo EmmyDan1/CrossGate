@@ -112,14 +112,14 @@ const IntroStatsSection = () => {
         viewport={{ once: true }}
         className="mt-20 max-w-3xl mx-auto text-[#4e3629] text-base md:text-lg leading-relaxed px-4"
       >
-        <h3 className="text-xl font-semibold mb-4">About Karagateway Connect</h3>
+        {/* <h3 className="text-xl font-semibold mb-4">About Karagateway Connect</h3>
         <p className="text-[#5e4336] opacity-90">
           Karagateway Connect is a modern pan-African trade platform facilitating
           economic bridges between European markets and African producers.
           Through strategic matchmaking, curated events, and partnership
           support, we channel sustainable capital and global opportunity into
           key African markets.
-        </p>
+        </p> */}
       </motion.div>
     </section>
   );

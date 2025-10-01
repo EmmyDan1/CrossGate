@@ -142,12 +142,6 @@ const Navbar = () => {
                 >
                   Blog
                 </Link>
-                <Link
-                  to="/insights/success-story"
-                  className="block px-4 py-2 hover:bg-black/50"
-                >
-                  Success Stories
-                </Link>
               </div>
             )}
           </div>
