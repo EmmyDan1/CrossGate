@@ -23,7 +23,6 @@ const StartTradeJourney = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
- 
 
     try {
       await emailjs.sendForm(
@@ -39,6 +38,7 @@ const StartTradeJourney = () => {
       console.error("Failed to send:", error);
       alert("There was an error sending your message. Please try again.");
     } finally {
+      setIsSubmitting(false);
     }
   };
 
