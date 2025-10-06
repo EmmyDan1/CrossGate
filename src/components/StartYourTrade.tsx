@@ -23,6 +23,7 @@ const StartTradeJourney = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    setSubmitStatus('idle')
 
     try {
       await emailjs.sendForm(
@@ -32,7 +33,8 @@ const StartTradeJourney = () => {
         "W2Sv78AOqLrMYkHrl"
       );
 
-      setIsSubmitting(true);
+    
+      setSubmitStatus("success")
       e.target.reset();
     } catch (error) {
       console.error("Failed to send:", error);
