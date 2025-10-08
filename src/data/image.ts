@@ -8,9 +8,9 @@ import VisionImg from "../assets/images/phto1.jpg";
 import matchmaking from "../assets/images/phto2.jpg";
 import logistics from "../assets/images/phto3.jpg";
 import advisory from "../assets/images/phto4.jpg";
-import CGlogo from "../assets/images/CGlogo.png";
-import CGlogo2 from "../assets/images/CGlogo (2).png";
-import CGlogoBrown from "../assets/images/CGlogoBrown.png";
+import CGlogo from "../assets/images/KaraLogo.png";
+import KaraLogo from "../assets/images/KaraLogo.png";
+import KaraLogo2 from "../assets/images/KaraLogo2.png";
 import step5 from "../assets/images/step5.jpg";
 import step2 from "../assets/images/step2.jpg";
 import step3 from "../assets/images/step3.jpg";
@@ -66,7 +66,7 @@ export const serviceImages = {
   PeopleTalking,
   Export
 };
-export { FounderImg, VisionImg, CGlogo, CGlogo2, CGlogoBrown };
+export { FounderImg, VisionImg, CGlogo, KaraLogo, KaraLogo2 };
 export const modelImages = {
   matchmaking,
   logistics,

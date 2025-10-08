@@ -9,12 +9,12 @@ export const Button = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="
-                  bg-[#dccab7] text-[#877762]
-                  px-8 py-2
-                  rounded-2xl font-medium text-lg md:text-xl
+                  bg-[#e4511b] text-[#fff]
+                  px-8 py-1
+                  rounded-lg font-normal text-lg md:text-md
                   transition-colors duration-300
                   shadow-lg hover:shadow-xl
-                  font-playfair
+                  font-
                 "
         >
           Start your trade Journey

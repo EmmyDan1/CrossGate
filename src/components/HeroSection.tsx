@@ -5,14 +5,15 @@ const HeroSection = () => {
   return (
     <div
       className="    
-        relative w-full min-h-screen bg-cover bg-[center_top_15%] flex items-center justify-center 
-        py-16 sm:py-20 md:py-0
+        relative w-full min-h-screen bg-cover  flex items-center justify-center 
+        py-16 sm:py-20 md:py-0 
         bg-[url('/images/HeroMobile1.png')]     
         sm:bg-[url('/images/HeroTab.png')]  
         lg:bg-[url('/images/HeroDesk.png')]
       "
     >
-      <div className="relative z-10 flex flex-col items-center w-full max-w-4xl px-5 sm:px-6 md:px-8 md:mt-8">
+      <div className="absolute inset-0 bg-black/20 z-0" />
+      <div className="relative z-10 flex flex-col items-center  px-5 sm:px-6 md:px-8 md:mt-24 ">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,27 +26,22 @@ const HeroSection = () => {
               text-slate-200
               tracking-tight
               font-libre
-              text-3xl sm:text-4xl md:text-5xl lg:text-[54px]
+              text-3xl sm:text-4xl md:text-5xl lg:text-[44px]
               font-extrabold
               mb-6
+
               leading-tight sm:leading-tight
             "
           >
-            <span className="block">
-              Where Global Innovations
-            </span>
-            <span className="block">
-              and Opportunities Meet
-            </span>
-            <span className="block mt-1">
-              African Excellence
-            </span>
+            <span className="block">Where Global Innovations</span>
+            <span className="block">and Opportunities Meet</span>
+            <span className="block mt-1">African Excellence</span>
           </h1>
 
           {/* Subtitle */}
           <p
             className="
-              text-[#f4e9dc]
+              text-[#fedd71]
               font-inter
               text-base sm:text-lg md:text-xl
               font-medium
