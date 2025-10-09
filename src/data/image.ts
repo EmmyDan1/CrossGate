@@ -26,6 +26,7 @@ import AfricanOil from "../assets/images/AfricanOil2.png";
 import LandingImg from '../assets/images/landingimg.png'
 import Funiture from "../assets/images/Funiture.jpg" 
 import Textiles from '../assets/images/Textiles.png'
+import KaraLogo3 from '../assets/images/KaraLogo3.png'
 
  type imageProp = {
     img: string
@@ -66,7 +67,7 @@ export const serviceImages = {
   PeopleTalking,
   Export
 };
-export { FounderImg, VisionImg, CGlogo, KaraLogo, KaraLogo2 };
+export { FounderImg, VisionImg, CGlogo, KaraLogo, KaraLogo2, KaraLogo3 };
 export const modelImages = {
   matchmaking,
   logistics,

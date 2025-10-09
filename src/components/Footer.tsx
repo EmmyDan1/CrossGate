@@ -1,3 +1,5 @@
+import { KaraLogo2 } from "../data/image";
+import { Link } from "react-router-dom";
 import {
   EnvelopeIcon,
   PhoneIcon,
@@ -16,12 +18,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold">Karagateway</h2>
+            <img src={KaraLogo2} alt="KaraGateWay" className="w- h-12" />
             <p className="text-secondary text-sm max-w-xs">
               Bridging opportunities through innovative trade solutions
             </p>
             <div className="flex space-x-4">
-              <a href="http://@karagateway" aria-label="Twitter">
+              <a href="https://x.com/karagateway" aria-label="Twitter">
                 <FaTwitter className="w-5 h-5 text-white hover:text-secondary" />
               </a>
               <a
@@ -36,7 +38,10 @@ const Footer = () => {
               >
                 <FaLinkedinIn className="w-5 h-5 text-white hover:text-secondary" />
               </a>
-              <a href="http://karagateway" aria-label="Instagram">
+              <a
+                href="http://www.instagram.com/karagateway"
+                aria-label="Instagram"
+              >
                 <FaInstagram className="w-5 h-5 text-white hover:text-secondary" />
               </a>
             </div>
@@ -46,39 +51,32 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 border-b border-secondary pb-2">
               Navigation
             </h3>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="/our-story"
-                  className="hover:text-secondary transition-colors text-sm"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/insights/blog"
-                  className="hover:text-secondary transition-colors text-sm"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/services"
-                  className="hover:text-secondary transition-colors text-sm"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/partner-with-us"
-                  className="hover:text-secondary transition-colors text-sm"
-                >
-                  Partner with us
-                </a>
-              </li>
+            <ul className="space-y-2 flex flex-col">
+              <Link
+                to="/our-story"
+                className="hover:text-secondary transition-colors text-sm"
+              >
+                About
+              </Link>
+              <Link
+                to="/insights/blog"
+                className="hover:text-secondary transition-colors text-sm"
+              >
+                Blog
+              </Link>
+
+              <Link
+                to="/services"
+                className="hover:text-secondary transition-colors text-sm"
+              >
+                Services
+              </Link>
+              <Link
+                to="/partner-with-us"
+                className="hover:text-secondary transition-colors text-sm"
+              >
+                Partner with us
+              </Link>
             </ul>
           </div>
 

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FiX, FiChevronRight, FiChevronDown } from "react-icons/fi";
 import { useState } from "react";
+import { KaraLogo2 } from "../data/image";
 
 interface SidebarProps {
   open: boolean;
@@ -32,7 +33,9 @@ const MobileSidebar = ({ open, setOpen }: SidebarProps) => {
           }`}
       >
         <div className="flex justify-between items-center px-6 py-5">
-          <span className="text-xl font-semibold text-primary">Karagateway</span>
+          <img src={KaraLogo2}
+          className="h-10"
+           />
           <button
             onClick={() => setOpen(false)}
             className="text-[#f4e9dc] hover:text-white transition-colors"
@@ -80,7 +83,10 @@ const MobileSidebar = ({ open, setOpen }: SidebarProps) => {
                 >
                   How It Works
                 </Link> */}
-                <Link to="/team" className="block px-4 py-2 text-[#4e3629] rounded-lg hover:bg-[#876e4B]/10 transition-colors">
+                <Link
+                  to="/team"
+                  className="block px-4 py-2 text-[#4e3629] rounded-lg hover:bg-[#876e4B]/10 transition-colors"
+                >
                   Team
                 </Link>
               </div>
@@ -128,7 +134,6 @@ const MobileSidebar = ({ open, setOpen }: SidebarProps) => {
                 >
                   Blog
                 </Link>
-
               </div>
             )}
           </div>

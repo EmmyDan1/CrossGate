@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiChevronDown } from "react-icons/fi";
 import MobileSidebar from "../components/MobileSidebar";
-import { KaraLogo } from "../data/image";
+import { KaraLogo3 } from "../data/image";
 import { KaraLogo2 } from "../data/image";
 
 const Navbar = () => {
@@ -56,18 +56,18 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-30 transition-all duration-500 px-6 md:px-8  flex justify-between items-center ${
+        className={`fixed top-0 left-0 w-full z-30 transition-all duration-500 pt-4 p-1 md:px-10 md:p-2  flex justify-between items-center  ${
           isHome
-            ? "bg-[#e4511b] text-white"
+            ? "bg-transparent text-white"
             : "bg-secondary text-primary shadow"
         } ${showNav ? "translate-y-0" : "-translate-y-full"}`}
       >
         <Link to="/" className="flex items-center ">
           {isHome ? (
             <img
-              src={KaraLogo}
+              src={KaraLogo3}
               alt="Karagateway Logo"
-              className="w-12 h-12 md:w-16 md:h-16 object-contain"
+              className="w-32 h-8 md:w-40 md:h-10 object-contain"
               loading="lazy"
             />
           ) : (
@@ -151,7 +151,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="md:hidden">
+        <div className="md:hidden pr-4">
           <button onClick={() => setIsOpen(true)}>
             <FiMenu
               size={32}

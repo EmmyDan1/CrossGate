@@ -25,3 +25,14 @@
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
+
+/* In your globals.css */
+.hero-section {
+  background-position: center 70% !important;
+}
+
+@media (min-width: 640px) {
+  .hero-section {
+    background-position: center !important;
+  }
+}
