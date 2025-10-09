@@ -9,7 +9,7 @@ export const Button = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="
-                  bg-[#dccab7] text-[#aa9c88]
+                  bg-[#dccab7] text-[#a2937d]
                   px-8 py-2
                   rounded-2xl font-normal text-lg md:text-md
                   transition-colors duration-300

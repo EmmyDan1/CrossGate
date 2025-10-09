@@ -15,7 +15,7 @@ import step5 from "../assets/images/step5.jpg";
 import step2 from "../assets/images/step2.jpg";
 import step3 from "../assets/images/step3.jpg";
 import step4 from "../assets/images/step4.jpg";
-import TechHardWare from "../assets/images/ProcessedFood2.png";
+import TechHardWare from "../assets/images/AgroTech.png";
 import IndustryMachine from "../assets/images/IndustryMachine.png";
 import ProcessedFood from "../assets/images/pharmecticals.png";
 import DiaryProduct from "../assets/images/DiaryProducts.png";
