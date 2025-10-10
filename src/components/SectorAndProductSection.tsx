@@ -41,7 +41,7 @@ const SectorsAndProducts = () => {
         },
         {
           name: "Digital Solutions & FinTech",
-          image: EstoniaToAfrica.Funiture,
+          image: EstoniaToAfrica.DigitalSolutions,
           description: "Digital transformation and financial technology"
         },
       ],

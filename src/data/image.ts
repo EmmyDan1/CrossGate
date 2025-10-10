@@ -15,18 +15,19 @@ import step5 from "../assets/images/step5.jpg";
 import step2 from "../assets/images/step2.jpg";
 import step3 from "../assets/images/step3.jpg";
 import step4 from "../assets/images/step4.jpg";
-import TechHardWare from "../assets/images/AgroTech.png";
+import TechHardWare from "../assets/images/AgricTech.jpg";
 import IndustryMachine from "../assets/images/IndustryMachine.png";
-import ProcessedFood from "../assets/images/pharmecticals.png";
+import ProcessedFood from "../assets/images/HealthCare4.jpg";
 import DiaryProduct from "../assets/images/DiaryProducts.png";
 import AfricanSpice from "../assets/images/AfricanSpices2.webp";
 import TradePfood from '../assets/images/TradePfood.png'
 import BambooProduct from "../assets/images/BambooProduct.jpg";
 import AfricanOil from "../assets/images/AfricanOil2.png";
 import LandingImg from '../assets/images/landingimg.png'
-import Funiture from "../assets/images/Funiture.jpg" 
+import Funiture from "../assets/images/SmartInfra.jpg" 
 import Textiles from '../assets/images/Textiles.png'
 import KaraLogo3 from '../assets/images/KaraLogo3.png'
+import DigitalSolutions from '../assets/images/DigitalSolutions.jpg'
 
  type imageProp = {
     img: string
@@ -39,6 +40,7 @@ export const EstoniaToAfrica = {
   ProcessedFood,
   DiaryProduct,
   Funiture,
+  DigitalSolutions
 };
 
 

@@ -74,7 +74,7 @@ const Navbar = () => {
             <img
               src={KaraLogo2}
               alt="Karagateway Logo"
-              className="w-12 h-12 md:w-16 md:h-16 object-contain"
+              className="ml-2 w-24 h-12 md:w-24 md:h-12 object-contain"
               loading="lazy"
             />
           )}
